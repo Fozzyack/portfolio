@@ -5,6 +5,7 @@ import { ProjectsSection } from "@/components/projects-section"
 import { SkillsSection } from "@/components/skills-section"
 import { ExperienceSection } from "@/components/experience-section"
 import { ContactSection } from "@/components/contact-section"
+import { BookMeetingSection } from "@/components/book-meeting-section"
 import { Footer } from "@/components/footer"
 import { AnimatedSection } from "@/components/animated-section"
 
@@ -35,6 +36,10 @@ export default function Portfolio() {
 
         <AnimatedSection animation="scale-up" delay={100}>
           <ContactSection />
+        </AnimatedSection>
+
+        <AnimatedSection animation="fade-up" delay={150}>
+          <BookMeetingSection />
         </AnimatedSection>
       </main>
 

@@ -48,7 +48,7 @@ const skillCategories = [
     title: "Frontend Technologies",
     skills: [
       { name: "React/Next.js", level: 95 },
-      { name: "Vue.js", level: 85 },
+      { name: "TailwindCSS", level: 85 },
       { name: "HTML/CSS", level: 95 },
       { name: "Tailwind CSS", level: 90 },
       { name: "Three.js", level: 70 },

@@ -50,7 +50,7 @@ export function Footer() {
                                     <Github className="h-5 w-5" />
                                 </a>
                                 <a
-                                    href="https://linkedin.com/fsund"
+                                    href="https://linkedin.com/fsundra"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"

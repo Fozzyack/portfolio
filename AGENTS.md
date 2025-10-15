@@ -4,6 +4,7 @@
 - Build: `npm run build`
 - Lint: `npm run lint`
 - Dev: `npm run dev`
+- Start: `npm run start`
 - No test runner configured
 
 ## Code Style

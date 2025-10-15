@@ -4,46 +4,60 @@ import { Calendar, MapPin } from "lucide-react"
 
 const experiences = [
   {
-    title: "Senior Full-Stack Developer",
-    company: "TechCorp Solutions",
-    location: "San Francisco, CA",
-    period: "2022 - Present",
+    title: "Software Engineering Intern",
+    company: "Hello Able",
+    location: "Perth WA and Remote",
+    period: "2025 - Present",
     description:
-      "Lead development of scalable web applications serving 100K+ users. Architected microservices infrastructure and mentored junior developers.",
+      "Moving and automating the work of offshoring teams, recreating tools internal, reducing offshore costs.",
     achievements: [
-      "Reduced application load time by 40% through optimization",
-      "Led team of 5 developers on major product redesign",
-      "Implemented CI/CD pipeline reducing deployment time by 60%",
+      "Reduced the need for offshore teams by 40% through optimization",
+      "Moved Multiple tools inhouse increasing efficiency by 20%, reducing processing times and costs",
+      "Building tools to increase marketing team efficiency by 50%",
     ],
     technologies: ["React", "Node.js", "AWS", "PostgreSQL", "Docker"],
   },
   {
-    title: "Software Engineer",
-    company: "StartupXYZ",
-    location: "Austin, TX",
-    period: "2020 - 2022",
+    title: "Software Engineering Intern",
+    company: "Equity Solar",
+    location: "Remote",
+    period: "2025 - Present",
+    description:
+      "Spearheading the development of a Virtual Power Plant to optimize distributed energy resources and grid stability. Leading technical architecture and implementation of energy management systems.",
+    achievements: [
+      "Leading Virtual Power Plant development to aggregate and optimize distributed energy resources",
+      "Architecting scalable energy management platform for grid integration",
+      "Developing real-time monitoring and control systems for renewable energy assets",
+    ],
+    technologies: ["React", "Node.js", "AWS", "PostgreSQL", "Docker"],
+  },
+  {
+    title: "Freelance Software Engineer",
+    company: "Freelance",
+    location: "Perth WA and Remote",
+    period: "2024 - 2025",
     description:
       "Developed and maintained full-stack applications using modern web technologies. Collaborated with cross-functional teams to deliver high-quality products.",
     achievements: [
-      "Built real-time chat system handling 10K concurrent users",
+      "Built a webapplication that tracks 100+ users through their studying journey",
       "Integrated payment processing with 99.9% uptime",
       "Developed mobile-responsive UI components",
     ],
-    technologies: ["Vue.js", "Express.js", "MongoDB", "Socket.io", "Stripe"],
+    technologies: ["NextJS", "Golang", "PostgreSQL", "Dotnet", "C#", "Stripe", "C++", "Docker"],
   },
   {
-    title: "Junior Developer",
-    company: "WebDev Agency",
-    location: "Remote",
-    period: "2019 - 2020",
+    title: "University Graduate",
+    company: "University of Western Australia",
+    location: "Perth WA",
+    period: "2018 - 2024",
     description:
-      "Created responsive websites and web applications for various clients. Gained experience in multiple frameworks and development methodologies.",
+      "Developed a foundation in Computer Science, Software Engineering and Cyber Security",
     achievements: [
-      "Delivered 15+ client projects on time and within budget",
-      "Improved website performance scores by average of 35%",
+      "Developed a dashboard for a student scholarship program reducing the need for offshore teams by 80%",
+      "Improved website performance scores by average of 10%",
       "Collaborated with design team to implement pixel-perfect UIs",
     ],
-    technologies: ["HTML/CSS", "JavaScript", "WordPress", "PHP", "MySQL"],
+    technologies: ["HTML/CSS", "Python", "Typescript", "C", "C++", "JavaScript", "Flask", "MySQL", "PostgreSQL"],
   },
 ]
 

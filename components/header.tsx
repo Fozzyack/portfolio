@@ -31,7 +31,9 @@ export function Header() {
         >
             <nav className="container mx-auto px-4 py-4">
                 <div className="flex items-center justify-between">
-                    <div className="text-xl font-bold text-primary">Frasier Sundra</div>
+                    <button onClick={() => scrollToSection("home")}>
+                        <div className="text-xl font-bold text-primary">Frasier Sundra</div>
+                    </button>
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-8">
