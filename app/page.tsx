@@ -38,9 +38,9 @@ export default function Portfolio() {
           <ContactSection />
         </AnimatedSection>
 
-        <AnimatedSection animation="fade-up" delay={150}>
+        {/* <AnimatedSection animation="fade-up" delay={150}>
           <BookMeetingSection />
-        </AnimatedSection>
+        </AnimatedSection> */}
       </main>
 
       <AnimatedSection animation="fade-up" delay={50}>
