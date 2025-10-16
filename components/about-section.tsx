@@ -10,7 +10,7 @@ export function AboutSection() {
           <div className="space-y-6">
             <Card className="card-hover">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">Background</h3>
+                <h3 className="text-xl font-semibold mb-3 text-red-600">Background</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   I'm a passionate computer science professional with a strong foundation in software development and
                   problem-solving. My journey began with curiosity about how technology works and has evolved into a
@@ -21,7 +21,7 @@ export function AboutSection() {
 
             <Card className="card-hover">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">Philosophy</h3>
+                <h3 className="text-xl font-semibold mb-3 text-red-600">Philosophy</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   I believe in writing clean, maintainable code and staying current with emerging technologies. My
                   approach combines technical expertise with creative problem-solving to deliver solutions that are both
@@ -34,7 +34,7 @@ export function AboutSection() {
           <div className="space-y-6">
             <Card className="card-hover">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">Interests</h3>
+                <h3 className="text-xl font-semibold mb-3 text-red-600">Interests</h3>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <span className="text-lg">🚀</span>
@@ -58,7 +58,7 @@ export function AboutSection() {
 
             <Card className="card-hover">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">Goals</h3>
+                <h3 className="text-xl font-semibold mb-3 text-red-600">Goals</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Currently focused on expanding my expertise in cloud architecture and contributing to open-source
                   projects. I'm always looking for opportunities to collaborate on meaningful projects that push the
