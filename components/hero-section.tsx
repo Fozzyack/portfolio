@@ -61,7 +61,7 @@ export function HeroSection() {
             </div>
 
             <div className="space-y-4">
-              <h1 className="bg-gradient-to-r from-primary via-cyan-400 to-accent bg-clip-text text-4xl font-black tracking-tight text-transparent sm:text-5xl lg:text-6xl">
+              <h1 className="bg-gradient-to-r from-primary via-red-600 to-accent bg-clip-text text-4xl font-black tracking-tight text-transparent sm:text-5xl lg:text-6xl">
                 Frasier Sundra
               </h1>
               <p className="text-2xl font-semibold text-foreground sm:text-3xl lg:text-[2.75rem]">
