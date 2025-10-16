@@ -8,13 +8,15 @@ import { ContactSection } from "@/components/contact-section";
 import { BookMeetingSection } from "@/components/book-meeting-section";
 import { Footer } from "@/components/footer";
 import { AnimatedSection } from "@/components/animated-section";
+import LoadingBar from "@/components/loading-bar";
 
 export default function Portfolio() {
     return (
-        <div className="min-h-screen bg-background">
+        <div className="relative min-h-screen bg-background">
+            <LoadingBar />
             <Header />
             <main>
-                <AnimatedSection animation="fade-in" delay={200}>
+                <AnimatedSection animation="fade-in" delay={1500}>
                     <HeroSection />
                 </AnimatedSection>
 
