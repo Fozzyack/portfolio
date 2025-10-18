@@ -97,7 +97,7 @@ export function HeroSection() {
                             </Button>
                             */}
               <Button size="lg" variant="outline" asChild>
-                <a href="/frasier-sundra-resume.pdf" download>
+                <a href="FrasierSundra-SWE.pdf" download>
                   <Download className="mr-2 h-4 w-4" />
                   Download resume
                 </a>
