@@ -11,6 +11,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { TypewriterText } from "@/components/typewriter-text";
+import Image from "next/image";
 
 const focusAreas: string[] = [
   "Full-stack product engineering",
@@ -54,8 +55,8 @@ export function HeroSection() {
 
       <div className="container mx-auto px-4 py-32">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-center">
-          <div className="space-y-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/80 px-4 py-2 text-sm text-primary shadow-sm backdrop-blur">
+          <div className="space-y-10 text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/80 px-4 py-2 text-sm text-primary shadow-sm backdrop-blur justify-center lg:justify-start w-full lg:w-auto">
               <Sparkles className="h-4 w-4" />
               <span>Hi, I'm Frasier</span>
             </div>
@@ -86,7 +87,7 @@ export function HeroSection() {
               experiences that scale.
             </p>
 
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center justify-center lg:justify-start">
               {/*
                             <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
                                 <a href="#book-call">
@@ -103,7 +104,7 @@ export function HeroSection() {
               </Button>
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
               {focusAreas.map((area) => (
                 <Badge
                   key={area}
@@ -115,7 +116,7 @@ export function HeroSection() {
               ))}
             </div>
 
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-6 justify-center lg:justify-start">
               {socialLinks.map(({ href, label, icon: Icon }) => (
                 <a
                   key={label}
@@ -133,38 +134,9 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="space-y-6 rounded-3xl border border-border/50 bg-background/70 p-8 shadow-xl backdrop-blur-xl">
-            <div className="space-y-2">
-              <p className="text-sm uppercase tracking-widest text-muted-foreground">
-                Snapshot
-              </p>
-              <h2 className="text-2xl font-semibold text-foreground">
-                Building momentum with thoughtful engineering
-              </h2>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Currently shaping energy tech and accessible tooling. I partner
-                with founders and teams to create products that balance
-                performance, accessibility, and maintainability.
-              </p>
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-2">
-              {quickStats.map(({ label, value }) => (
-                <div
-                  key={label}
-                  className="rounded-2xl border border-border/60 bg-background/60 p-4 shadow-sm transition-all hover:border-primary/50"
-                >
-                  <p className="text-2xl font-bold text-foreground">{value}</p>
-                  <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                    {label}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <div className="rounded-2xl border border-dashed border-primary/30 bg-primary/5 p-5 text-sm text-muted-foreground">
-              Let's turn your roadmap into tangible outcomes — from discovery to
-              deployment.
+          <div className="flex items-center justify-center">
+            <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full border-4 border-primary/50 bg-muted/30 backdrop-blur-xl flex items-center justify-center overflow-hidden">
+            <Image src="/profile-picture.jpg" alt="frasier" height={1000} width={1000} />
             </div>
           </div>
         </div>

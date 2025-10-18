@@ -22,21 +22,21 @@ export function AnimatedSection({ children, className = "", delay = 0, animation
     if (!isIntersecting) {
       switch (animation) {
         case "fade-up":
-          return `${baseClasses} opacity-0 translate-y-8`
+          return `${baseClasses} opacity-0`
         case "fade-in":
           return `${baseClasses} opacity-0`
         case "slide-left":
-          return `${baseClasses} opacity-0 -translate-x-8`
+          return `${baseClasses} opacity-0`
         case "slide-right":
-          return `${baseClasses} opacity-0 translate-x-8`
+          return `${baseClasses} opacity-0`
         case "scale-up":
           return `${baseClasses} opacity-0 scale-95`
         default:
-          return `${baseClasses} opacity-0 translate-y-8`
+          return `${baseClasses} opacity-0`
       }
     }
 
-    return `${baseClasses} opacity-100 translate-y-0 translate-x-0 scale-100`
+    return `${baseClasses} opacity-100 scale-100`
   }
 
   return (

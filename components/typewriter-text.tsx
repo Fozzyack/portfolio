@@ -52,7 +52,7 @@ export function TypewriterText({ texts, className = "" }: TypewriterTextProps) {
 
   return (
     <span className={className}>
-      {currentText}
+      <span className="text-primary">~$ </span>{currentText}
       <span className="animate-pulse text-primary">_</span>
     </span>
   )
