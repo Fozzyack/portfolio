@@ -70,7 +70,7 @@ export function Footer() {
 
                     <div className="border-t border-border mt-8 pt-8 text-center">
                         <p className="text-muted-foreground flex items-center justify-center gap-1">
-                            Made with <Heart className="h-4 w-4 text-red-500" /> by Frasier Sundra © 2024
+                            { /* Made with <Heart className="h-4 w-4 text-red-500" /> */} by Frasier Sundra © 2025
                         </p>
                     </div>
                 </div>
