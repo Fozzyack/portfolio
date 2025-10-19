@@ -39,7 +39,7 @@ const socialLinks: SocialLink[] = [
 
 export function HeroSection() {
   return (
-    <section id="home" className="relative overflow-hidden min-h-screen">
+    <section id="home" className="relative overflow-hidden min-h-screen flex items-center pt-12 md:pt-0">
       <div
         className="absolute inset-0 -z-10 bg-gradient-to-br from-background via-background to-primary/10"
         aria-hidden
@@ -53,7 +53,7 @@ export function HeroSection() {
         aria-hidden
       />
 
-      <div className="container mx-auto px-4 py-32">
+      <div className="container mx-auto px-4 py-8 sm:py-16 lg:py-0">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-center">
           <div className="space-y-10 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/80 px-4 py-2 text-sm text-primary shadow-sm backdrop-blur justify-center lg:justify-start w-full lg:w-auto">
@@ -66,7 +66,7 @@ export function HeroSection() {
                 Frasier Sundra
               </h1>
               <p className="text-2xl font-semibold text-foreground sm:text-3xl lg:text-[2.75rem]">
-                Engineering resilient products that elevate teams and users
+                  Passionate about code, driven to build products that matter
               </p>
               <div className="text-xl text-muted-foreground sm:text-2xl">
                 <TypewriterText
@@ -80,7 +80,7 @@ export function HeroSection() {
               </div>
             </div>
 
-            <p className="max-w-2xl text-lg text-foreground/80 leading-relaxed">
+            <p className="hidden sm:block max-w-2xl text-lg text-foreground/80 leading-relaxed">
               I design and ship end-to-end solutions across web, cloud, and
               automation. With a strong product mindset and a love for polished
               developer tools, I turn complex requirements into delightful

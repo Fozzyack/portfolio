@@ -7,6 +7,16 @@ import { Menu, X } from "lucide-react"
 export function Header() {
     const [isScrolled, setIsScrolled] = useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+    const [isMobile, setIsMobile] = useState(false)
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768)
+        }
+        checkMobile()
+        window.addEventListener("resize", checkMobile)
+        return () => window.removeEventListener("resize", checkMobile)
+    }, [])
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,8 +36,13 @@ export function Header() {
 
     return (
         <header
-            className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-sm border-b border-border" : "bg-transparent"
-                }`}
+            className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+                isMobile
+                    ? "bg-background/95 backdrop-blur-sm border-b border-border"
+                    : isScrolled
+                        ? "bg-background/95 backdrop-blur-sm border-b border-border"
+                        : "bg-transparent"
+            }`}
         >
             <nav className="container mx-auto px-4 py-4">
                 <div className="flex items-center justify-between">
