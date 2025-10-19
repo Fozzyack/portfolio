@@ -39,7 +39,7 @@ const socialLinks: SocialLink[] = [
 
 export function HeroSection() {
   return (
-    <section id="home" className="relative overflow-hidden min-h-screen">
+    <section id="home" className="relative overflow-hidden min-h-screen flex items-center">
       <div
         className="absolute inset-0 -z-10 bg-gradient-to-br from-background via-background to-primary/10"
         aria-hidden
@@ -53,7 +53,7 @@ export function HeroSection() {
         aria-hidden
       />
 
-      <div className="container mx-auto px-4 py-32">
+      <div className="container mx-auto px-4">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-center">
           <div className="space-y-10 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/80 px-4 py-2 text-sm text-primary shadow-sm backdrop-blur justify-center lg:justify-start w-full lg:w-auto">
