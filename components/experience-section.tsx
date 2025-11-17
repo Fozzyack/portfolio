@@ -11,11 +11,10 @@ const experiences = [
     description:
       "Moving and automating the work of offshoring teams, recreating tools internal, reducing offshore costs.",
     achievements: [
-      "Reduced the need for offshore teams by 40% through optimization",
-      "Moved Multiple tools inhouse increasing efficiency by 20%, reducing processing times and costs",
-      "Building tools to increase marketing team efficiency by 50%",
+      "Redesign frontend UI Library",
+      "Frontend Bug hunter",
     ],
-    technologies: ["React", "Node.js", "AWS", "PostgreSQL", "Docker"],
+    technologies: [".NET Framework", "Bootstrap", "Express Server", "JQuery"],
   },
   {
     title: "Software Engineering Intern",
@@ -29,7 +28,7 @@ const experiences = [
       "Architecting scalable energy management platform for grid integration",
       "Developing real-time monitoring and control systems for renewable energy assets",
     ],
-    technologies: ["React", "Node.js", "AWS", "PostgreSQL", "Docker"],
+    technologies: ["React", "Node.js", "AWS", "PostgreSQL", "Docker", "ASP.NET"],
   },
   {
     title: "Freelance Software Engineer",

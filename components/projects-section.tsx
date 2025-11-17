@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Github, ExternalLink } from "lucide-react"
+import { Github } from "lucide-react"
 
 const projects = [
     {
@@ -10,26 +10,23 @@ const projects = [
             "A Password manager that locally stores passwords using GPG encyption",
         image: "/modern-ecommerce-interface.png",
         technologies: ["Go", "GPG", "AES", "TUI"],
-        github: "https://github.com",
-        demo: "https://demo.com",
+        demo: "",
     },
     {
-        title: "AI Chat Application",
+        title: "Quote Tool",
         description:
-            "Real-time chat application with AI integration using OpenAI API. Built with Next.js, Socket.io, and MongoDB for seamless communication.",
+            "A Webapp that gives potential clients up to date solar prices (EQUITY SOLAR)",
         image: "/ai-chat-interface.png",
-        technologies: ["Next.js", "OpenAI API", "Socket.io", "MongoDB", "TypeScript"],
-        github: "https://github.com",
-        demo: "https://demo.com",
+        technologies: ["Next.js", "React", "Typescript", "HTML", "CSS", "Tailwindcss" ],
+        demo: "https://quote.equitysolar.com.au",
     },
     {
-        title: "Task Management System",
+        title: "Virtual Power Plant Monitor",
         description:
-            "Collaborative project management tool with drag-and-drop functionality, real-time updates, and team collaboration features.",
+            "A dashboard that aggregates and monitors the output for solar devices - batteries & inverters (EQUITY SOLAR)",
         image: "/task-management-kanban-dashboard.png",
-        technologies: ["Vue.js", "Express.js", "MySQL", "WebSocket", "Docker"],
-        github: "https://github.com",
-        demo: "https://demo.com",
+        technologies: ["NextJS", "ASP.NET", "PostgreSQL", "WebSocket", "Docker"],
+        demo: "",
     },
     {
         title: "ASICIS Student Scholarship Dashboard",
@@ -37,7 +34,7 @@ const projects = [
             "Data visualization dashboard for managing scholarhsip programs with interactive charts, and data preprocessing tools.",
         image: "/machine-learning-dashboard.png",
         technologies: ["Python", "Flask", "TensorFlow", "D3.js", "Pandas"],
-        demo: "https://demo.com",
+        demo: "",
     },
 ]
 
