@@ -33,7 +33,7 @@ const projects = [
         description:
             "Data visualization dashboard for managing scholarhsip programs with interactive charts, and data preprocessing tools.",
         image: "/machine-learning-dashboard.png",
-        technologies: ["Python", "Flask", "TensorFlow", "D3.js", "Pandas"],
+        technologies: ["Python", "Flask", "numpy", "Pandas"],
         demo: "",
     },
 ]
