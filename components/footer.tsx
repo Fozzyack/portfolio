@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from "lucide-react"
+import { Github, Linkedin, Mail, Heart } from "lucide-react";
 
 export function Footer() {
     return (
@@ -8,10 +8,13 @@ export function Footer() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {/* Brand */}
                         <div>
-                            <h3 className="text-xl font-bold text-primary mb-4">Frasier Sundra</h3>
+                            <h3 className="text-xl font-bold text-primary mb-4">
+                                Frasier Sundra
+                            </h3>
                             <p className="text-muted-foreground leading-relaxed">
-                                Full-Stack Developer passionate about creating innovative solutions and building exceptional user
-                                experiences.
+                                Full-Stack Developer passionate about creating
+                                innovative solutions and building exceptional
+                                user experiences.
                             </p>
                         </div>
 
@@ -19,20 +22,29 @@ export function Footer() {
                         <div>
                             <h4 className="font-semibold mb-4">Quick Links</h4>
                             <div className="space-y-2">
-                                <a href="#about" className="block text-muted-foreground hover:text-primary transition-colors">
+                                <a
+                                    href="#about"
+                                    className="block text-muted-foreground hover:text-primary transition-colors"
+                                >
                                     About
                                 </a>
-                                <a href="#projects" className="block text-muted-foreground hover:text-primary transition-colors">
+                                <a
+                                    href="#projects"
+                                    className="block text-muted-foreground hover:text-primary transition-colors"
+                                >
                                     Projects
                                 </a>
-                                <a href="#skills" className="block text-muted-foreground hover:text-primary transition-colors">
+                                <a
+                                    href="#skills"
+                                    className="block text-muted-foreground hover:text-primary transition-colors"
+                                >
                                     Skills
                                 </a>
-                                <a href="#experience" className="block text-muted-foreground hover:text-primary transition-colors">
+                                <a
+                                    href="#experience"
+                                    className="block text-muted-foreground hover:text-primary transition-colors"
+                                >
                                     Experience
-                                </a>
-                                <a href="#contact" className="block text-muted-foreground hover:text-primary transition-colors">
-                                    Contact
                                 </a>
                             </div>
                         </div>
@@ -64,17 +76,20 @@ export function Footer() {
                                     <Mail className="h-5 w-5" />
                                 </a>
                             </div>
-                            <p className="text-sm text-muted-foreground">fsundra@gmail.com</p>
+                            <p className="text-sm text-muted-foreground">
+                                fsundra@gmail.com
+                            </p>
                         </div>
                     </div>
 
                     <div className="border-t border-border mt-8 pt-8 text-center">
                         <p className="text-muted-foreground flex items-center justify-center gap-1">
-                            { /* Made with <Heart className="h-4 w-4 text-red-500" /> */} by Frasier Sundra © 2025
+                            {/* Made with <Heart className="h-4 w-4 text-red-500" /> */}{" "}
+                            by Frasier Sundra © 2025
                         </p>
                     </div>
                 </div>
             </div>
         </footer>
-    )
+    );
 }

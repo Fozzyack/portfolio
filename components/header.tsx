@@ -76,9 +76,6 @@ export function Header() {
                         >
                             Experience
                         </button>
-                        <Button onClick={() => scrollToSection("contact")} className="bg-primary hover:bg-primary/90">
-                            Contact
-                        </Button>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -120,9 +117,6 @@ export function Header() {
                             >
                                 Experience
                             </button>
-                            <Button onClick={() => scrollToSection("contact")} className="w-full bg-primary hover:bg-primary/90">
-                                Contact
-                            </Button>
                         </div>
                     </div>
                 )}

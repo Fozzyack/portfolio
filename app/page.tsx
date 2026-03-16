@@ -28,21 +28,23 @@ export default function Portfolio() {
                     <ProjectsSection />
                 </AnimatedSection>
 
-                <AnimatedSection animation="slide-left" delay={200}>
-                    <SkillsSection />
-                </AnimatedSection>
-
                 <AnimatedSection animation="slide-right" delay={150}>
                     <ExperienceSection />
                 </AnimatedSection>
 
+                <AnimatedSection animation="slide-left" delay={200}>
+                    <SkillsSection />
+                </AnimatedSection>
+
+                {/*
                 <AnimatedSection animation="scale-up" delay={100}>
                     <ContactSection />
                 </AnimatedSection>
+                */}
 
                 {/* <AnimatedSection animation="fade-up" delay={150}>
-          <BookMeetingSection />
-        </AnimatedSection> */}
+              <BookMeetingSection />
+            </AnimatedSection> */}
             </main>
 
             <AnimatedSection animation="fade-up" delay={50}>
