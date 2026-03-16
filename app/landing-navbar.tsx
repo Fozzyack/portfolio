@@ -44,7 +44,9 @@ export function LandingNavbar() {
             >
                 Frasier Sundra
             </a>
-            <span
+            <a
+                href="/frasier-sundra.pdf"
+                download
                 className={`animate-fade-in justify-self-end border px-3 py-1 text-[0.6rem] tracking-[0.18em] ${
                     scrolled
                         ? "border-[#232720]/30 bg-[#e9e4d8] text-[#232720]/86"
@@ -52,8 +54,8 @@ export function LandingNavbar() {
                 }`}
                 style={{ animationDelay: "220ms" }}
             >
-                Available 2026
-            </span>
+                Download Resume
+            </a>
         </nav>
     );
 }

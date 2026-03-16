@@ -88,8 +88,8 @@ export function ProjectsSection() {
                             onClick={() => setActiveProject(project)}
                             className={
                                 project.dark
-                                    ? "cursor-pointer border border-[#c8b28b]/40 bg-[#232720] p-6 text-left transition-all duration-200 hover:-translate-y-0.5 hover:border-[#c8b28b]/70 hover:bg-[#262b23]"
-                                    : "cursor-pointer border border-[#232720]/20 bg-[#e9e4d8] p-6 text-left transition-all duration-200 hover:-translate-y-0.5 hover:border-[#232720]/45 hover:bg-[#e5e0d3]"
+                                    ? "group cursor-pointer border border-[#c8b28b]/40 bg-[#232720] p-6 text-left transition-all duration-200 hover:-translate-y-0.5 hover:border-[#c8b28b]/70 hover:bg-[#262b23]"
+                                    : "group cursor-pointer border border-[#232720]/20 bg-[#e9e4d8] p-6 text-left transition-all duration-200 hover:-translate-y-0.5 hover:border-[#232720]/45 hover:bg-[#e5e0d3]"
                             }
                         >
                             <p
@@ -135,6 +135,15 @@ export function ProjectsSection() {
                                 }
                             >
                                 {project.description}
+                            </p>
+                            <p
+                                className={
+                                    project.dark
+                                        ? "mt-5 text-[0.58rem] uppercase tracking-[0.2em] text-[#e7e1d3]/70"
+                                        : "mt-5 text-[0.58rem] uppercase tracking-[0.2em] text-[#232720]/62"
+                                }
+                            >
+                                View details →
                             </p>
                         </button>
                     ))}
