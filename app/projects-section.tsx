@@ -1,7 +1,38 @@
 "use client";
 
 import Image from "next/image";
+import type { ReactNode } from "react";
 import { useState } from "react";
+
+const toolIconSrcByName: Record<string, string> = {
+    "Next.js": "https://img.icons8.com/color/48/nextjs.png",
+    TypeScript: "https://img.icons8.com/color/48/typescript.png",
+    "Node.js": "https://img.icons8.com/color/48/nodejs.png",
+    PostgreSQL: "https://img.icons8.com/color/48/postgreesql.png",
+    Vercel: "https://img.icons8.com/ios-filled/50/vercel.png",
+    SQL: "https://img.icons8.com/fluency/48/sql.png",
+    Bun: "https://img.icons8.com/fluency/48/bun.png",
+    "Tailwind CSS": "https://img.icons8.com/color/48/tailwind_css.png",
+    "C#": "https://img.icons8.com/nolan/64/c-sharp-logo.png",
+    "ASP.NET Core": "https://img.icons8.com/color/48/net-framework.png",
+    "Google Cloud": "https://img.icons8.com/color/48/google-cloud.png",
+};
+
+function getToolIcon(toolName: string): ReactNode | null {
+    const src = toolIconSrcByName[toolName];
+
+    if (!src) {
+        return null;
+    }
+
+    return (
+        <img
+            src={src}
+            alt={`${toolName} icon`}
+            className="h-4 w-4 object-contain"
+        />
+    );
+}
 
 type Project = {
     id: string;
@@ -19,7 +50,8 @@ const projects: Project[] = [
     {
         id: "01",
         title: "Quote Tool",
-        description: "A tool for getting quotes for solar systems in Sydney, AUS.",
+        description:
+            "A tool for getting quotes for solar systems in Sydney, AUS.",
         previewLabel: "Quote Tool Preview",
         imageSrc: "/projects/quote-tool.png",
         dark: false,
@@ -37,7 +69,7 @@ const projects: Project[] = [
         previewLabel: "Kaneyo Preview",
         imageSrc: "/projects/kaneyo.png",
         dark: true,
-        tools: ["Next.js", "TypeScript", "SQL", "Bun", "Tailwind CSS"],
+        tools: ["golang", "SQL", "Bun", "Tailwind CSS"],
         problem:
             "Most finance tools felt cluttered, which made daily tracking hard to maintain over time.",
         thoughtProcess:
@@ -49,7 +81,14 @@ const projects: Project[] = [
         description: "An internal room booking system for Bloom meeting rooms.",
         previewLabel: "Bloom Preview",
         dark: false,
-        tools: ["TypeScript", "Node.js", "PostgreSQL", "Google Cloud"],
+        tools: [
+            "Next.js",
+            "TypeScript",
+            "Node.js",
+            "PostgreSQL",
+            "django",
+            "Google Cloud",
+        ],
         problem:
             "Room collisions and unclear ownership created meeting chaos during busy team hours.",
         thoughtProcess:
@@ -58,11 +97,12 @@ const projects: Project[] = [
     {
         id: "04",
         title: "MVC Boarding Tool",
-        description: "A system to manage boarding animals at veterinary clinics.",
+        description:
+            "A system to manage boarding animals at veterinary clinics.",
         previewLabel: "MVC Preview",
         imageSrc: "/projects/mvc.png",
         dark: true,
-        tools: ["C#", "ASP.NET Core", "SQL", "PostgreSQL"],
+        tools: ["Next.js", "TypeScript", "SQL", "PostgreSQL"],
         problem:
             "Clinic staff were juggling paper notes and spreadsheets for boarding logistics, causing avoidable handoff errors.",
         thoughtProcess:
@@ -87,7 +127,8 @@ export function ProjectsSection() {
                         Selected Projects
                     </p>
                     <p className="max-w-md text-right text-[0.72rem] uppercase tracking-[0.14em] text-[#232720]/65">
-                        Product thinking, strong interfaces, and dependable systems.
+                        Product thinking, strong interfaces, and dependable
+                        systems.
                     </p>
                 </div>
 
@@ -146,7 +187,9 @@ export function ProjectsSection() {
 
             <div
                 className={`fixed inset-0 z-40 transition-opacity duration-300 ${
-                    activeProject ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+                    activeProject
+                        ? "pointer-events-auto opacity-100"
+                        : "pointer-events-none opacity-0"
                 }`}
             >
                 <button
@@ -198,7 +241,8 @@ export function ProjectsSection() {
                                 ) : (
                                     <div className="flex h-full items-center justify-center">
                                         <span className="text-[0.58rem] uppercase tracking-[0.2em] text-[#232720]/55">
-                                            {activeProject?.previewLabel ?? "Project Preview"}
+                                            {activeProject?.previewLabel ??
+                                                "Project Preview"}
                                         </span>
                                     </div>
                                 )}
@@ -213,8 +257,9 @@ export function ProjectsSection() {
                                 {activeProject?.tools.map((tool) => (
                                     <span
                                         key={tool}
-                                        className="border border-[#232720]/20 bg-[#ede8dc] px-3 py-2 text-[0.62rem] uppercase tracking-[0.16em] text-[#232720]/82"
+                                        className="flex items-center gap-2 border border-[#232720]/20 bg-[#ede8dc] px-3 py-2 text-[0.62rem] uppercase tracking-[0.16em] text-[#232720]/82"
                                     >
+                                        {getToolIcon(tool)}
                                         {tool}
                                     </span>
                                 ))}
