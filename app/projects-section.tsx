@@ -1,10 +1,30 @@
-const projects = [
+"use client";
+
+import { useState } from "react";
+
+type Project = {
+    id: string;
+    title: string;
+    description: string;
+    previewLabel: string;
+    dark: boolean;
+    tools: string[];
+    problem: string;
+    thoughtProcess: string;
+};
+
+const projects: Project[] = [
     {
         id: "01",
         title: "Quote Tool",
         description: "A tool for getting quotes for solar systems in Sydney, AUS.",
         previewLabel: "Quote Tool Preview",
         dark: false,
+        tools: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Vercel"],
+        problem:
+            "Sales teams were losing qualified solar leads because quoting was manual and response times were inconsistent.",
+        thoughtProcess:
+            "I designed the flow to capture just enough information for an accurate quote quickly, then validated location and system fit early so users stayed in a fast, guided path.",
     },
     {
         id: "02",
@@ -13,6 +33,11 @@ const projects = [
             "A minimalistic finance tracking app built for clarity and control.",
         previewLabel: "Kaneyo Preview",
         dark: true,
+        tools: ["Next.js", "TypeScript", "SQL", "Bun", "Tailwind CSS"],
+        problem:
+            "Most finance tools felt cluttered, which made daily tracking hard to maintain over time.",
+        thoughtProcess:
+            "I prioritized single-purpose screens, lightweight interactions, and clear category logic so users could add and review transactions with minimal cognitive load.",
     },
     {
         id: "03",
@@ -20,6 +45,11 @@ const projects = [
         description: "An internal room booking system for Bloom meeting rooms.",
         previewLabel: "Bloom Preview",
         dark: false,
+        tools: ["TypeScript", "Node.js", "PostgreSQL", "Google Cloud"],
+        problem:
+            "Room collisions and unclear ownership created meeting chaos during busy team hours.",
+        thoughtProcess:
+            "I focused on conflict prevention first: real-time availability, simple booking constraints, and transparent ownership so teams could trust the schedule at a glance.",
     },
     {
         id: "04",
@@ -27,10 +57,17 @@ const projects = [
         description: "A system to manage boarding animals at veterinary clinics.",
         previewLabel: "MVC Preview",
         dark: true,
+        tools: ["C#", "ASP.NET Core", "SQL", "PostgreSQL"],
+        problem:
+            "Clinic staff were juggling paper notes and spreadsheets for boarding logistics, causing avoidable handoff errors.",
+        thoughtProcess:
+            "I mapped the full boarding lifecycle first, then built around dependable status transitions, medication notes, and clear audit history for safer operations.",
     },
-] as const;
+];
 
 export function ProjectsSection() {
+    const [activeProject, setActiveProject] = useState<Project | null>(null);
+
     return (
         <section id="projects" className="relative px-8 py-24 md:px-14 md:py-28">
             <div className="mx-auto max-w-6xl">
@@ -45,12 +82,14 @@ export function ProjectsSection() {
 
                 <div className="mt-8 grid gap-4 md:grid-cols-2">
                     {projects.map((project) => (
-                        <article
+                        <button
                             key={project.id}
+                            type="button"
+                            onClick={() => setActiveProject(project)}
                             className={
                                 project.dark
-                                    ? "border border-[#c8b28b]/40 bg-[#232720] p-6"
-                                    : "border border-[#232720]/20 bg-[#e9e4d8] p-6"
+                                    ? "cursor-pointer border border-[#c8b28b]/40 bg-[#232720] p-6 text-left transition-all duration-200 hover:-translate-y-0.5 hover:border-[#c8b28b]/70 hover:bg-[#262b23]"
+                                    : "cursor-pointer border border-[#232720]/20 bg-[#e9e4d8] p-6 text-left transition-all duration-200 hover:-translate-y-0.5 hover:border-[#232720]/45 hover:bg-[#e5e0d3]"
                             }
                         >
                             <p
@@ -97,9 +136,82 @@ export function ProjectsSection() {
                             >
                                 {project.description}
                             </p>
-                        </article>
+                        </button>
                     ))}
                 </div>
+            </div>
+
+            <div
+                className={`fixed inset-0 z-40 transition-opacity duration-300 ${
+                    activeProject ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+                }`}
+            >
+                <button
+                    type="button"
+                    aria-label="Close project details"
+                    onClick={() => setActiveProject(null)}
+                    className="absolute inset-0 bg-[#11130f]/45"
+                />
+
+                <aside
+                    className={`absolute right-0 top-0 h-screen w-full max-w-xl border-l border-[#232720]/20 bg-[#f1eee6] p-8 transition-transform duration-300 ${
+                        activeProject ? "translate-x-0" : "translate-x-full"
+                    }`}
+                >
+                    <div className="flex items-start justify-between border-b border-[#232720]/15 pb-5">
+                        <div>
+                            <p className="text-[0.58rem] uppercase tracking-[0.22em] text-[#232720]/60">
+                                {activeProject?.id}
+                            </p>
+                            <h3 className="mt-2 text-3xl uppercase tracking-[0.06em] text-[#232720]">
+                                {activeProject?.title}
+                            </h3>
+                        </div>
+                        <button
+                            type="button"
+                            onClick={() => setActiveProject(null)}
+                            className="border border-[#232720]/25 px-3 py-1 text-[0.6rem] uppercase tracking-[0.18em] text-[#232720]/78 transition-colors hover:bg-[#e7e1d3]"
+                        >
+                            Close
+                        </button>
+                    </div>
+
+                    <div className="mt-6 space-y-6">
+                        <section>
+                            <p className="text-[0.56rem] uppercase tracking-[0.22em] text-[#232720]/60">
+                                Tools / Tech
+                            </p>
+                            <div className="mt-3 flex flex-wrap gap-2">
+                                {activeProject?.tools.map((tool) => (
+                                    <span
+                                        key={tool}
+                                        className="border border-[#232720]/20 bg-[#ede8dc] px-3 py-2 text-[0.62rem] uppercase tracking-[0.16em] text-[#232720]/82"
+                                    >
+                                        {tool}
+                                    </span>
+                                ))}
+                            </div>
+                        </section>
+
+                        <section>
+                            <p className="text-[0.56rem] uppercase tracking-[0.22em] text-[#232720]/60">
+                                Problem
+                            </p>
+                            <p className="mt-3 text-[0.72rem] uppercase tracking-[0.14em] text-[#232720]/80">
+                                {activeProject?.problem}
+                            </p>
+                        </section>
+
+                        <section>
+                            <p className="text-[0.56rem] uppercase tracking-[0.22em] text-[#232720]/60">
+                                Thought Process
+                            </p>
+                            <p className="mt-3 text-[0.72rem] uppercase tracking-[0.14em] text-[#232720]/80">
+                                {activeProject?.thoughtProcess}
+                            </p>
+                        </section>
+                    </div>
+                </aside>
             </div>
         </section>
     );
