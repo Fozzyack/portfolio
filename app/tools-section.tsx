@@ -1,4 +1,5 @@
 const tools = [
+    { id: "13", name: "Golang" },
     { id: "01", name: "Next.js" },
     { id: "02", name: "TypeScript" },
     { id: "03", name: "Tailwind CSS" },
@@ -9,9 +10,10 @@ const tools = [
     { id: "08", name: "PostgreSQL" },
     { id: "09", name: "Vercel" },
     { id: "10", name: "Google Cloud" },
+    { id: "14", name: "C++" },
+    { id: "15", name: "C" },
     { id: "11", name: "C#" },
     { id: "12", name: "ASP.NET Core" },
-    { id: "13", name: "Golang" },
 ] as const;
 
 export function ToolsSection() {
