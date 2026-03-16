@@ -5,46 +5,320 @@ type ToolItem = {
     svg: ReactNode;
 };
 
-const toolGroups = [
+type ToolGroup = {
+    id: string;
+    title: string;
+    direction: "left" | "right";
+    tools: ToolItem[];
+};
+
+const toolGroups: ToolGroup[] = [
     {
         id: "01",
         title: "Languages",
+        direction: "left",
         tools: [
-            { name: "Golang", svg: null },
-            { name: "TypeScript", svg: null },
-            { name: "SQL", svg: null },
-            { name: "C++", svg: null },
+            {
+                name: "Golang",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/golang.png"
+                        alt="golang"
+                    />
+                ),
+            },
+            {
+                name: "TypeScript",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/typescript.png"
+                        alt="typescript"
+                    />
+                ),
+            },
+            {
+                name: "SQL",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/fluency/48/sql.png"
+                        alt="sql"
+                    />
+                ),
+            },
+            {
+                name: "C++",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/fluency/48/c-plus-plus-logo.png"
+                        alt="c-plus-plus-logo"
+                    />
+                ),
+            },
             { name: "C", svg: null },
-            { name: "C#", svg: null },
+            {
+                name: "C#",
+                svg: (
+                    <img
+                        width="64"
+                        height="64"
+                        src="https://img.icons8.com/nolan/64/c-sharp-logo.png"
+                        alt="c-sharp-logo"
+                    />
+                ),
+            },
+            {
+                name: "Python",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/python--v1.png"
+                        alt="python--v1"
+                    />
+                ),
+            },
+            {
+                name: "JavaScript",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/javascript--v1.png"
+                        alt="javascript--v1"
+                    />
+                ),
+            },
+            {
+                name: "Bash",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/bash.png"
+                        alt="bash"
+                    />
+                ),
+            },
         ] satisfies ToolItem[],
     },
     {
         id: "02",
         title: "Frameworks",
+        direction: "right",
         tools: [
-            { name: "Next.js", svg: null },
-            { name: "Tailwind CSS", svg: null },
-            { name: "ASP.NET Core", svg: null },
-            { name: "Node.js", svg: null },
+            {
+                name: "Next.js",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/nextjs.png"
+                        alt="nextjs"
+                    />
+                ),
+            },
+            {
+                name: "React",
+                svg: (
+                    <img
+                        width="24"
+                        height="24"
+                        src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
+                        alt="external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo"
+                    />
+                ),
+            },
+            {
+                name: "Tailwind CSS",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/tailwind_css.png"
+                        alt="tailwind_css"
+                    />
+                ),
+            },
+            {
+                name: "ASP.NET Core",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/net-framework.png"
+                        alt="net-framework"
+                    />
+                ),
+            },
+            {
+                name: "Node.js",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/nodejs.png"
+                        alt="nodejs"
+                    />
+                ),
+            },
+            {
+                name: "Express",
+                svg: (
+                    <img
+                        width="50"
+                        height="50"
+                        src="https://img.icons8.com/ios/50/express-js.png"
+                        alt="express-js"
+                    />
+                ),
+            },
+            {
+                name: "Django",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/django.png"
+                        alt="django"
+                    />
+                ),
+            },
         ] satisfies ToolItem[],
     },
     {
         id: "03",
         title: "Data & Cloud",
+        direction: "left",
         tools: [
-            { name: "PostgreSQL", svg: null },
-            { name: "Vercel", svg: null },
-            { name: "Google Cloud", svg: null },
+            {
+                name: "PostgreSQL",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/postgreesql.png"
+                        alt="postgreesql"
+                    />
+                ),
+            },
+            { name: "Supabase", svg: null },
+            {
+                name: "Redis",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/redis--v2.png"
+                        alt="redis--v2"
+                    />
+                ),
+            },
+            {
+                name: "Vercel",
+                svg: (
+                    <img
+                        width="50"
+                        height="50"
+                        src="https://img.icons8.com/ios-filled/50/vercel.png"
+                        alt="vercel"
+                    />
+                ),
+            },
+            {
+                name: "Google Cloud",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/google-cloud.png"
+                        alt="google-cloud"
+                    />
+                ),
+            },
+            {
+                name: "Docker",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/docker.png"
+                        alt="docker"
+                    />
+                ),
+            },
+            { name: "CI/CD", svg: null },
         ] satisfies ToolItem[],
     },
     {
         id: "04",
         title: "Tooling",
+        direction: "right",
         tools: [
-            { name: "npm", svg: null },
+            {
+                name: "npm",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/npm.png"
+                        alt="npm"
+                    />
+                ),
+            },
             { name: "Bun", svg: null },
-            { name: "Docker", svg: null },
-            { name: "Linux", svg: null },
+            {
+                name: "Linux",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/linux--v1.png"
+                        alt="linux--v1"
+                    />
+                ),
+            },
+            {
+                name: "Git",
+                svg: (
+                    <img
+                        width="48"
+                        height="48"
+                        src="https://img.icons8.com/color/48/git.png"
+                        alt="git"
+                    />
+                ),
+            },
+            {
+                name: "GitHub",
+                svg: (
+                    <img
+                        width="24"
+                        height="24"
+                        src="https://img.icons8.com/material-rounded/24/github.png"
+                        alt="github"
+                    />
+                ),
+            },
+            {
+                name: "Neovim",
+                svg: (
+                    <img
+                        width="24"
+                        height="24"
+                        src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-vim-a-highly-configurable-text-editor-for-efficiently-creating-and-changing-any-kind-of-text-logo-color-tal-revivo.png"
+                        alt="external-vim-a-highly-configurable-text-editor-for-efficiently-creating-and-changing-any-kind-of-text-logo-color-tal-revivo"
+                    />
+                ),
+            },
+            { name: "Yaak", svg: null },
         ] satisfies ToolItem[],
     },
 ] as const;
@@ -67,7 +341,7 @@ export function ToolsSection() {
                     </h3>
                 </div>
 
-                <div className="mt-6 grid gap-6 md:grid-cols-2">
+                <div className="mt-6 space-y-4">
                     {toolGroups.map((group) => (
                         <section
                             key={group.id}
@@ -82,20 +356,34 @@ export function ToolsSection() {
                                 </h4>
                             </div>
 
-                            <div className="mt-3 grid gap-2">
-                                {group.tools.map((tool) => (
-                                    <article
-                                        key={tool.name}
-                                        className="flex items-center gap-3 border border-[#232720]/10 bg-[#ede8dc] px-3 py-2"
-                                    >
-                                        <span className="flex h-6 w-6 items-center justify-center border border-[#232720]/20 text-[0.44rem] uppercase tracking-[0.14em] text-[#232720]/55">
-                                            {tool.svg ?? "icon"}
-                                        </span>
-                                        <p className="text-[0.66rem] uppercase tracking-[0.16em] text-[#232720]/82">
-                                            {tool.name}
-                                        </p>
-                                    </article>
-                                ))}
+                            <div className="mt-3 overflow-hidden">
+                                <div
+                                    className={`flex w-max gap-2 ${
+                                        group.direction === "left"
+                                            ? "animate-marquee-left"
+                                            : "animate-marquee-right"
+                                    }`}
+                                >
+                                    {[
+                                        ...group.tools,
+                                        ...group.tools,
+                                        ...group.tools,
+                                    ].map((tool, index) => (
+                                        <article
+                                            key={`${group.id}-${tool.name}-${index}`}
+                                            className="flex min-w-44 items-center gap-3 border border-[#232720]/10 bg-[#ede8dc] px-3 py-2"
+                                        >
+                                            {tool.svg ? (
+                                                <span className="flex h-6 w-6 items-center justify-center text-[#232720]/70">
+                                                    {tool.svg}
+                                                </span>
+                                            ) : null}
+                                            <p className="text-[0.66rem] uppercase tracking-[0.16em] text-[#232720]/82">
+                                                {tool.name}
+                                            </p>
+                                        </article>
+                                    ))}
+                                </div>
                             </div>
                         </section>
                     ))}

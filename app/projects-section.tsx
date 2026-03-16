@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 type Project = {
@@ -7,6 +8,7 @@ type Project = {
     title: string;
     description: string;
     previewLabel: string;
+    imageSrc?: string;
     dark: boolean;
     tools: string[];
     problem: string;
@@ -19,6 +21,7 @@ const projects: Project[] = [
         title: "Quote Tool",
         description: "A tool for getting quotes for solar systems in Sydney, AUS.",
         previewLabel: "Quote Tool Preview",
+        imageSrc: "/projects/quote-tool.png",
         dark: false,
         tools: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Vercel"],
         problem:
@@ -32,6 +35,7 @@ const projects: Project[] = [
         description:
             "A minimalistic finance tracking app built for clarity and control.",
         previewLabel: "Kaneyo Preview",
+        imageSrc: "/projects/kaneyo.png",
         dark: true,
         tools: ["Next.js", "TypeScript", "SQL", "Bun", "Tailwind CSS"],
         problem:
@@ -56,6 +60,7 @@ const projects: Project[] = [
         title: "MVC Boarding Tool",
         description: "A system to manage boarding animals at veterinary clinics.",
         previewLabel: "MVC Preview",
+        imageSrc: "/projects/mvc.png",
         dark: true,
         tools: ["C#", "ASP.NET Core", "SQL", "PostgreSQL"],
         problem:
@@ -116,23 +121,6 @@ export function ProjectsSection() {
                             >
                                 {project.title}
                             </h3>
-                            <div
-                                className={
-                                    project.dark
-                                        ? "mt-4 flex h-40 items-center justify-center border border-[#e7e1d3]/15 bg-[#1d211b]"
-                                        : "mt-4 flex h-40 items-center justify-center border border-[#232720]/15 bg-[#f1eee6]"
-                                }
-                            >
-                                <span
-                                    className={
-                                        project.dark
-                                            ? "text-[0.58rem] uppercase tracking-[0.2em] text-[#e7e1d3]/55"
-                                            : "text-[0.58rem] uppercase tracking-[0.2em] text-[#232720]/55"
-                                    }
-                                >
-                                    {project.previewLabel}
-                                </span>
-                            </div>
                             <p
                                 className={
                                     project.dark
@@ -192,6 +180,31 @@ export function ProjectsSection() {
                     </div>
 
                     <div className="mt-6 space-y-6">
+                        <section>
+                            <p className="text-[0.56rem] uppercase tracking-[0.22em] text-[#232720]/60">
+                                Preview
+                            </p>
+                            <div className="mt-3 aspect-[16/9] w-full overflow-hidden border border-[#232720]/15 bg-[#ede8dc]">
+                                {activeProject?.imageSrc ? (
+                                    <div className="relative h-full w-full">
+                                        <Image
+                                            src={activeProject.imageSrc}
+                                            alt={`${activeProject.title} project preview`}
+                                            fill
+                                            className="object-cover"
+                                            sizes="(min-width: 1024px) 40vw, 100vw"
+                                        />
+                                    </div>
+                                ) : (
+                                    <div className="flex h-full items-center justify-center">
+                                        <span className="text-[0.58rem] uppercase tracking-[0.2em] text-[#232720]/55">
+                                            {activeProject?.previewLabel ?? "Project Preview"}
+                                        </span>
+                                    </div>
+                                )}
+                            </div>
+                        </section>
+
                         <section>
                             <p className="text-[0.56rem] uppercase tracking-[0.22em] text-[#232720]/60">
                                 Tools / Tech
