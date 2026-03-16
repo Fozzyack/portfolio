@@ -69,8 +69,14 @@ export function ProjectsSection() {
     const [activeProject, setActiveProject] = useState<Project | null>(null);
 
     return (
-        <section id="projects" className="relative px-8 py-24 md:px-14 md:py-28">
-            <div className="mx-auto max-w-6xl">
+        <section
+            id="projects"
+            className="relative overflow-hidden bg-[linear-gradient(180deg,#ddd8ca_0%,#cfd2c6_100%)] px-8 py-24 md:px-14 md:py-28"
+        >
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_22%_16%,rgba(255,255,255,0.34)_0%,transparent_44%)]" />
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(35,39,32,0.03)_0%,transparent_45%,rgba(35,39,32,0.02)_100%)]" />
+
+            <div className="relative mx-auto max-w-6xl">
                 <div className="flex items-end justify-between gap-6 border-b border-[#232720]/20 pb-6">
                     <p className="text-[0.62rem] uppercase tracking-[0.22em] text-[#232720]/70">
                         Selected Projects

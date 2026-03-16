@@ -1,3 +1,5 @@
+import { ContactSection } from "@/app/contact-section";
+import { ExperienceSection } from "@/app/experience-section";
 import { LandingNavbar } from "@/app/landing-navbar";
 import { ProjectsSection } from "@/app/projects-section";
 import { ToolsSection } from "@/app/tools-section";
@@ -68,6 +70,8 @@ export default function Portfolio() {
 
             <ProjectsSection />
             <ToolsSection />
+            <ExperienceSection />
+            <ContactSection />
         </main>
     );
 }
