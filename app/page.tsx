@@ -1,5 +1,6 @@
 import { LandingNavbar } from "@/app/landing-navbar";
 import { ProjectsSection } from "@/app/projects-section";
+import { ToolsSection } from "@/app/tools-section";
 
 export default function Portfolio() {
     return (
@@ -66,6 +67,7 @@ export default function Portfolio() {
             </section>
 
             <ProjectsSection />
+            <ToolsSection />
         </main>
     );
 }

@@ -49,8 +49,8 @@ export function ProjectsSection() {
                             key={project.id}
                             className={
                                 project.dark
-                                    ? "rounded-sm border border-[#c8b28b]/40 bg-[#232720] p-6"
-                                    : "rounded-sm border border-[#232720]/20 bg-[#e9e4d8] p-6"
+                                    ? "border border-[#c8b28b]/40 bg-[#232720] p-6"
+                                    : "border border-[#232720]/20 bg-[#e9e4d8] p-6"
                             }
                         >
                             <p
@@ -74,8 +74,8 @@ export function ProjectsSection() {
                             <div
                                 className={
                                     project.dark
-                                        ? "mt-4 flex h-40 items-center justify-center rounded-sm border border-[#e7e1d3]/15 bg-[#1d211b]"
-                                        : "mt-4 flex h-40 items-center justify-center rounded-sm border border-[#232720]/15 bg-[#f1eee6]"
+                                        ? "mt-4 flex h-40 items-center justify-center border border-[#e7e1d3]/15 bg-[#1d211b]"
+                                        : "mt-4 flex h-40 items-center justify-center border border-[#232720]/15 bg-[#f1eee6]"
                                 }
                             >
                                 <span
