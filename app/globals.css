@@ -29,12 +29,73 @@ html {
     }
 }
 
+@keyframes draw-horizontal {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes draw-vertical {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes fade-in-letter {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
 .animate-fade-up {
     animation: fade-up 900ms cubic-bezier(0.2, 0.75, 0.15, 1) both;
 }
 
 .animate-fade-in {
     animation: fade-in 700ms ease-out both;
+}
+
+.animate-draw-h {
+    animation: draw-horizontal 900ms cubic-bezier(0.2, 0.75, 0.15, 1) both;
+}
+
+.animate-draw-h-center {
+    animation: draw-horizontal 900ms cubic-bezier(0.2, 0.75, 0.15, 1) both;
+    transform-origin: center;
+}
+
+.animate-draw-h-right {
+    animation: draw-horizontal 900ms cubic-bezier(0.2, 0.75, 0.15, 1) both;
+    transform-origin: right;
+}
+
+.animate-draw-v {
+    animation: draw-vertical 800ms cubic-bezier(0.2, 0.75, 0.15, 1) both;
+    transform-origin: top;
+}
+
+.animate-draw-v-bottom {
+    animation: draw-vertical 800ms cubic-bezier(0.2, 0.75, 0.15, 1) both;
+    transform-origin: bottom;
+}
+
+.animate-letter {
+    display: inline-block;
+    animation: fade-in-letter 600ms cubic-bezier(0.2, 0.75, 0.15, 1) both;
 }
 
 /* ── Marquee (tools ribbon) ─────────────────────────────── */
