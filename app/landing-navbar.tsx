@@ -2,8 +2,11 @@
 
 import { useEffect, useState } from "react";
 
+const NAV_SECTIONS = ["projects", "tools", "experience", "contact"] as const;
+
 export function LandingNavbar() {
     const [scrolled, setScrolled] = useState(false);
+    const [activeSection, setActiveSection] = useState<string | null>(null);
 
     useEffect(() => {
         const onScroll = () => {
@@ -18,6 +21,31 @@ export function LandingNavbar() {
         };
     }, []);
 
+    useEffect(() => {
+        const observers: IntersectionObserver[] = [];
+
+        for (const id of NAV_SECTIONS) {
+            const el = document.getElementById(id);
+            if (!el) continue;
+
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(id);
+                    }
+                },
+                { threshold: 0.3, rootMargin: "-80px 0px -40% 0px" },
+            );
+
+            observer.observe(el);
+            observers.push(observer);
+        }
+
+        return () => {
+            for (const obs of observers) obs.disconnect();
+        };
+    }, []);
+
     return (
         <nav className="fixed inset-x-0 top-0 z-30 grid w-full grid-cols-3 items-center px-6 py-5 text-[0.72rem] uppercase tracking-[0.22em] md:px-10 md:text-[0.78rem]">
             <div
@@ -27,12 +55,28 @@ export function LandingNavbar() {
                         : "border-transparent bg-transparent opacity-0"
                 }`}
             />
-            <a
-                href="#projects"
-                className="animate-fade-in justify-self-start text-[#232720]/88 transition-opacity hover:opacity-65"
-            >
-                Projects
-            </a>
+            <div className="flex items-center gap-4 justify-self-start">
+                <a
+                    href="#projects"
+                    className={`animate-fade-in transition-opacity hover:opacity-65 ${
+                        activeSection === "projects"
+                            ? "text-[#232720]"
+                            : "text-[#232720]/88"
+                    }`}
+                >
+                    Projects
+                </a>
+                {scrolled && activeSection ? (
+                    <span className="hidden text-[0.48rem] tracking-[0.2em] text-[#c8b28b]/80 md:inline">
+                        /
+                    </span>
+                ) : null}
+                {scrolled && activeSection ? (
+                    <span className="hidden text-[0.48rem] tracking-[0.2em] text-[#232720]/50 md:inline">
+                        {activeSection}
+                    </span>
+                ) : null}
+            </div>
             <a
                 href="#"
                 className={`animate-fade-in justify-self-center bg-clip-text text-transparent transition-opacity hover:opacity-75 ${
@@ -47,10 +91,10 @@ export function LandingNavbar() {
             <a
                 href="/frasier-sundra.pdf"
                 download
-                className={`animate-fade-in justify-self-end border px-3 py-1 text-[0.6rem] tracking-[0.18em] ${
+                className={`animate-fade-in justify-self-end border px-3 py-1 text-[0.6rem] tracking-[0.18em] transition-all duration-200 ${
                     scrolled
-                        ? "border-[#232720]/30 bg-[#e9e4d8] text-[#232720]/86"
-                        : "border-[#e7e1d3]/40 bg-[#e7e1d3]/8 text-[#e7e1d3]/92"
+                        ? "border-[#232720]/30 bg-[#e9e4d8] text-[#232720]/86 hover:border-[#232720]/50 hover:bg-[#e1dbce]"
+                        : "border-[#e7e1d3]/40 bg-[#e7e1d3]/8 text-[#e7e1d3]/92 hover:border-[#e7e1d3]/60 hover:bg-[#e7e1d3]/18"
                 }`}
                 style={{ animationDelay: "220ms" }}
             >

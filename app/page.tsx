@@ -2,6 +2,7 @@ import { ContactSection } from "@/app/contact-section";
 import { ExperienceSection } from "@/app/experience-section";
 import { LandingNavbar } from "@/app/landing-navbar";
 import { ProjectsSection } from "@/app/projects-section";
+import { SectionDivider } from "@/app/section-divider";
 import { ToolsSection } from "@/app/tools-section";
 import { VolunteeringSection } from "@/app/volunteering-section";
 
@@ -70,8 +71,11 @@ export default function Portfolio() {
             </section>
 
             <ProjectsSection />
+            <SectionDivider />
             <ToolsSection />
+            <SectionDivider />
             <ExperienceSection />
+            <SectionDivider />
             <VolunteeringSection />
             <ContactSection />
         </main>
