@@ -37,28 +37,8 @@ A modern, responsive portfolio website built with Next.js 15, TypeScript, and Ta
 ## 📁 Project Structure
 
 ```
-portfolio/
-├── app/                    # Next.js App Router
-│   ├── layout.tsx         # Root layout
-│   ├── page.tsx           # Homepage
-│   └── globals.css        # Global styles
-├── components/            # React components
-│   ├── ui/               # Reusable UI components
-│   ├── animated-section.tsx
-│   ├── hero-section.tsx
-│   ├── about-section.tsx
-│   ├── projects-section.tsx
-│   ├── skills-section.tsx
-│   ├── experience-section.tsx
-│   ├── contact-section.tsx
-│   ├── header.tsx
-│   ├── footer.tsx
-│   └── typewriter-text.tsx
-├── lib/                  # Utility functions
-├── hooks/                # Custom React hooks
-├── public/               # Static assets
-└── styles/               # Additional stylesheets
 ```
+
 
 ## 🚀 Getting Started
 
