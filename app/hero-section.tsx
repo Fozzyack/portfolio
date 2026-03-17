@@ -41,9 +41,9 @@ const LEFT_STATS = [
 ] as const;
 
 const RIGHT_STATS = [
-    { label: "Projects", value: "10+" },
-    { label: "Stack", value: "TS / Go / C#" },
-    { label: "Education", value: "BSc CS" },
+    { label: "Github Username", value: "Fozzyack" },
+    { label: "Stack", value: "TS / Go" },
+    { label: "Education", value: "BSc" },
 ] as const;
 
 export function HeroSection() {
