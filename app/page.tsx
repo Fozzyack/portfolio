@@ -3,6 +3,7 @@ import { ExperienceSection } from "@/app/experience-section";
 import { LandingNavbar } from "@/app/landing-navbar";
 import { ProjectsSection } from "@/app/projects-section";
 import { ToolsSection } from "@/app/tools-section";
+import { VolunteeringSection } from "@/app/volunteering-section";
 
 export default function Portfolio() {
     return (
@@ -71,6 +72,7 @@ export default function Portfolio() {
             <ProjectsSection />
             <ToolsSection />
             <ExperienceSection />
+            <VolunteeringSection />
             <ContactSection />
         </main>
     );

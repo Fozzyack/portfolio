@@ -11,13 +11,13 @@ type ExperienceItem = {
 const experiences: ExperienceItem[] = [
     {
         id: "01",
-        role: "Software Engineering Intern",
-        organization: "Equity Solar",
+        role: "Volunteer Tech Lead",
+        organization: "Coders for Causes",
         location: "Perth, WA",
-        dates: "Aug 2025 - Nov 2025",
+        dates: "Nov 2025 - Present",
         impact:
-            "Developed secure internal tools for a solar brokerage, reducing reliance on outsourced workflows by 50%.",
-        stack: "ReactJS, NextJS, AspNetCore, C#, TypeScript",
+            "Helped define Django-Next.js architecture for Bloom Booking System and mentored junior developers through weekly pairing.",
+        stack: "ReactJS, NextJS, Django, TypeScript, Python",
     },
     {
         id: "02",
@@ -31,23 +31,23 @@ const experiences: ExperienceItem[] = [
     },
     {
         id: "03",
-        role: "Volunteer Tech Lead",
-        organization: "Coders for Causes",
+        role: "Software Engineering Intern",
+        organization: "Equity Solar",
         location: "Perth, WA",
-        dates: "Nov 2025 - Present",
+        dates: "Aug 2025 - Nov 2025",
         impact:
-            "Helped define Django-Next.js architecture for Bloom Booking System and mentored junior developers through weekly pairing.",
-        stack: "ReactJS, NextJS, Django, TypeScript, Python",
+            "Developed secure internal tools for a solar brokerage, reducing reliance on outsourced workflows by 50%.",
+        stack: "ReactJS, NextJS, AspNetCore, C#, TypeScript",
     },
     {
         id: "04",
-        role: "Web Project Contributor",
-        organization: "Happiness Co.",
+        role: "Freelance Web Developer",
+        organization: "Various Clients",
         location: "Perth, WA",
-        dates: "Jun 2025 - Aug 2025",
+        dates: "Oct 2024 - Jul 2025",
         impact:
-            "Designed a charity website supporting a $100,000 mental health fundraising target, with $20,000 raised to date.",
-        stack: "Frontend UI, content architecture, campaign landing pages",
+            "Delivered responsive web experiences for small business and community clients, translating requirements into maintainable UI and dependable feature releases.",
+        stack: "Next.js, React, TypeScript, Tailwind CSS, API integrations",
     },
 ];
 
