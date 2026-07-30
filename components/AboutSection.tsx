@@ -14,12 +14,83 @@ const details = [
     ["Stage", "Early career"],
 ];
 
+const techStack = [
+    {
+        label: "Frontend",
+        technologies: [
+            {
+                name: "React",
+                icon: "https://img.icons8.com/color/48/react-native.png",
+            },
+            {
+                name: "TypeScript",
+                icon: "https://img.icons8.com/color/48/typescript.png",
+            },
+            {
+                name: "Next.js",
+                icon: "https://img.icons8.com/color/48/nextjs.png",
+            },
+            {
+                name: "Tailwind CSS",
+                icon: "https://img.icons8.com/color/48/tailwind_css.png",
+            },
+        ],
+    },
+    {
+        label: "Backend",
+        technologies: [
+            {
+                name: "Go",
+                icon: "https://img.icons8.com/color/48/golang.png",
+            },
+            {
+                name: "Python",
+                icon: "https://img.icons8.com/color/48/python.png",
+            },
+            {
+                name: "C#",
+                icon: "https://img.icons8.com/nolan/64/c-sharp-logo.png",
+            },
+            {
+                name: ".NET",
+                icon: "https://img.icons8.com/color/48/net-framework.png",
+            },
+        ],
+    },
+    {
+        label: "Tools",
+        technologies: [
+            {
+                name: "PostgreSQL",
+                icon: "https://img.icons8.com/color/48/postgreesql.png",
+            },
+            {
+                name: "Git",
+                icon: "https://img.icons8.com/color/48/git.png",
+            },
+            {
+                name: "Docker",
+                icon: "https://img.icons8.com/color/48/docker.png",
+            },
+            {
+                name: "Linux",
+                icon: "https://img.icons8.com/color/48/linux.png",
+            },
+            {
+                name: "Vim",
+                icon: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-vim-a-highly-configurable-text-editor-for-efficiently-creating-and-changing-any-kind-of-text-logo-color-tal-revivo.png",
+            },
+        ],
+    },
+];
+
 export default function AboutSection() {
     const root = useRef<HTMLElement>(null);
 
     useGSAP(
         () => {
             const heading = SplitText.create(".heading", { type: "words" });
+            const iconBadges = gsap.utils.toArray(".icon-badge")
 
             gsap.from(heading.words, {
                 opacity: 0,
@@ -31,6 +102,17 @@ export default function AboutSection() {
                     toggleActions: "play none none reverse",
                 },
             });
+            gsap.from(iconBadges, {
+                opacity: 0,
+                y: 30,
+                stagger: 0.08,
+                scrollTrigger: {
+                    trigger: root.current,
+                    start: "center center",
+                    toggleActions: "play none none reverse",
+                    markers: true
+                }
+            })
         },
         { scope: root },
     );
@@ -79,6 +161,47 @@ export default function AboutSection() {
                             </div>
                         ))}
                     </dl>
+
+                    <div className="mt-16 max-w-2xl border-t border-white/10 pt-6">
+                        <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">
+                            Tools I work with
+                        </p>
+                        <dl className="mt-6 grid gap-5 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-6">
+                            {techStack.map(({ label, technologies }) => (
+                                <div key={label}>
+                                    <dt className="font-mono text-[10px] uppercase tracking-[0.16em] text-cyan-200/70">
+                                        {label}
+                                    </dt>
+                                    <dd className="mt-3 flex flex-wrap gap-2">
+                                        {technologies.map(({ name, icon }) => (
+                                            <span
+                                                className="icon-badge inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1.5 text-xs text-zinc-300"
+                                                key={name}
+                                            >
+                                                <img
+                                                    alt=""
+                                                    className="h-4 w-4 object-contain"
+                                                    src={icon}
+                                                />
+                                                {name}
+                                            </span>
+                                        ))}
+                                    </dd>
+                                </div>
+                            ))}
+                        </dl>
+                        <p className="mt-8 font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-600">
+                            Icons from{" "}
+                            <a
+                                className="text-zinc-500 transition-colors hover:text-cyan-200"
+                                href="https://icons8.com"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Icons8
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
