@@ -1,6 +1,5 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
@@ -46,8 +45,6 @@ export default function HeroSection() {
                 className="hero-glow absolute -right-32 top-24 -z-10 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl"
                 aria-hidden="true"
             />
-
-            <Navbar email={profile.email} />
 
             <div
                 className="mx-auto flex w-full max-w-7xl flex-1 items-center py-20 lg:py-24"

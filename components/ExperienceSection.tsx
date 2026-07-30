@@ -63,7 +63,7 @@ export default function ExperienceSection() {
                 {
                     opacity: 0,
                     x: -30,
-                    stagger: 0.5,
+                    stagger: 0.25,
                 },
                 ">",
             );
