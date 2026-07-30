@@ -1,25 +1,19 @@
-import { ContactSection } from "@/app/contact-section";
-import { ExperienceSection } from "@/app/experience-section";
-import { HeroSection } from "@/app/hero-section";
-import { LandingNavbar } from "@/app/landing-navbar";
-import { ProjectsSection } from "@/app/projects-section";
-import { SectionDivider } from "@/app/section-divider";
-import { ToolsSection } from "@/app/tools-section";
-import { VolunteeringSection } from "@/app/volunteering-section";
+import AboutSection from "@/components/AboutSection";
+import ContactSection from "@/components/ContactSection";
+import ExperienceSection from "@/components/ExperienceSection";
+import HeroSection from "@/components/HeroSection";
+import Navbar from "@/components/Navbar";
+import WorkSection from "@/components/WorkSection";
 
-export default function Portfolio() {
+export default function Home() {
     return (
-        <main className="w-full bg-[#f1eee6] text-[#1f2321]">
-            <LandingNavbar />
+        <>
+            <Navbar />
             <HeroSection />
-            <ProjectsSection />
-            <SectionDivider />
-            <ToolsSection />
-            <SectionDivider />
+            <AboutSection />
             <ExperienceSection />
-            <SectionDivider />
-            <VolunteeringSection />
+            <WorkSection />
             <ContactSection />
-        </main>
+        </>
     );
 }
