@@ -23,14 +23,19 @@ export default function HeroSection() {
                 type: "chars",
             });
 
-            gsap.from(heroText.chars, {
-                display: "inline-block",
-                opacity: 0,
-                y: 30,
-                duration: 0.8,
-                stagger: 0.02,
-                ease: "power3.out",
-            });
+            gsap.timeline()
+                .from(heroText.chars, {
+                    display: "inline-block",
+                    opacity: 0,
+                    y: 30,
+                    stagger: 0.05,
+                    ease: "power3.out",
+                })
+                .from(".underline-animation", {
+                    width: 0,
+                    duration: 1.5,
+                    ease: "power3.out",
+                });
         },
         { scope: root },
     );
@@ -41,6 +46,15 @@ export default function HeroSection() {
             aria-labelledby="hero-title"
             ref={root}
         >
+            <video
+                autoPlay
+                className="absolute left-0 top-0 z-[-1] h-full w-full object-cover"
+                muted
+                loop
+            >
+                <source src="/landing-vid.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute w-full h-full  bg-black/40" />
             <div
                 className="hero-glow absolute -right-32 top-24 -z-10 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl"
                 aria-hidden="true"
@@ -50,12 +64,15 @@ export default function HeroSection() {
                 className="mx-auto flex w-full max-w-7xl flex-1 items-center py-20 lg:py-24"
                 id="top"
             >
-                <div className="w-full text-center">
+                <div className="relative w-full text-center z-20">
                     <h1
                         className="hero-header text-[clamp(4rem,13vw,12rem)] font-medium leading-[0.82] tracking-[-0.09em] text-white"
                         id="hero-title"
                     >
-                        Frasier Sundra
+                        <span className="decoration-2 underline-offset-[0.12em]">
+                            Frasier Sundra
+                            <div className="underline-animation h-1 w-full bg-cyan-300/70" />
+                        </span>
                         <br />
                         <em className="font-serif text-[0.72em] font-normal tracking-[-0.08em] text-zinc-400">
                             Software Engineer.

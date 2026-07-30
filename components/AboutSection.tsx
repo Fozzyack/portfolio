@@ -90,7 +90,7 @@ export default function AboutSection() {
     useGSAP(
         () => {
             const heading = SplitText.create(".heading", { type: "words" });
-            const iconBadges = gsap.utils.toArray(".icon-badge")
+            const iconBadges = gsap.utils.toArray(".icon-badge");
 
             gsap.from(heading.words, {
                 opacity: 0,
@@ -108,11 +108,10 @@ export default function AboutSection() {
                 stagger: 0.08,
                 scrollTrigger: {
                     trigger: root.current,
-                    start: "center center",
+                    start: "30% 40%",
                     toggleActions: "play none none reverse",
-                    markers: true
-                }
-            })
+                },
+            });
         },
         { scope: root },
     );
