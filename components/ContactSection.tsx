@@ -33,7 +33,6 @@ export default function ContactSection() {
                     trigger: root.current,
                     start: "top 10%",
                     toggleActions: "play none none reverse",
-                    markers: true,
                 },
             });
         },
