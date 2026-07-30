@@ -1,12 +1,12 @@
 "use client";
+
 import Navbar from "@/components/Navbar";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
 import { useRef } from "react";
 
-gsap.registerPlugin(useGSAP);
-gsap.registerPlugin(SplitText);
+gsap.registerPlugin(useGSAP, SplitText);
 
 const profile = {
     name: "Frasier Sundra",
@@ -17,6 +17,7 @@ const profile = {
 
 export default function HeroSection() {
     const root = useRef<HTMLElement>(null);
+
     useGSAP(
         () => {
             const heroText = SplitText.create(".hero-header", {
@@ -27,12 +28,14 @@ export default function HeroSection() {
                 display: "inline-block",
                 opacity: 0,
                 y: 30,
+                duration: 0.8,
                 stagger: 0.02,
                 ease: "power3.out",
             });
         },
         { scope: root },
     );
+
     return (
         <section
             className="relative isolate flex min-h-screen flex-col overflow-hidden bg-[#0a0b0d] px-6 text-zinc-100 sm:px-10 lg:px-16"
@@ -40,7 +43,7 @@ export default function HeroSection() {
             ref={root}
         >
             <div
-                className="absolute -right-32 top-24 -z-10 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl"
+                className="hero-glow absolute -right-32 top-24 -z-10 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl"
                 aria-hidden="true"
             />
 
@@ -61,7 +64,7 @@ export default function HeroSection() {
                             Software Engineer.
                         </em>
                     </h1>
-                    <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
+                    <div className="hero-actions mt-10 flex flex-wrap items-center justify-center gap-6">
                         <a
                             className="group inline-flex items-center gap-4 rounded-full bg-cyan-200 px-6 py-3 text-sm font-medium text-[#0a0b0d] transition-transform hover:-translate-y-0.5"
                             href="#work"
@@ -90,7 +93,7 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-5 border-t border-white/10 py-5 font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">
+            <div className="hero-footer mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-5 border-t border-white/10 py-5 font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">
                 <span className="hidden items-center gap-3 sm:flex">
                     Scroll to explore
                     <span

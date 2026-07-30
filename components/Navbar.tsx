@@ -24,6 +24,12 @@ export default function Navbar({ email }: NavbarProps) {
                 </a>
                 <a
                     className="transition-colors hover:text-white"
+                    href="#experience"
+                >
+                    Experience
+                </a>
+                <a
+                    className="transition-colors hover:text-white"
                     href={`mailto:${email}`}
                 >
                     Contact
