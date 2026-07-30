@@ -25,6 +25,7 @@ export default function HeroSection() {
 
             gsap.timeline()
                 .from(heroText.chars, {
+                    delay: 1.5,
                     display: "inline-block",
                     opacity: 0,
                     y: 30,

@@ -22,7 +22,7 @@ export default function Navbar() {
             opacity: 0,
             x: 1000,
             delay: 2.5,
-            duration: 1.5,
+            duration: 3,
             ease: "power3.out",
         });
     });
