@@ -407,7 +407,7 @@ export default function WorkSection() {
                     </div>
                     <p className="header max-w-xs text-sm leading-6 text-zinc-500 sm:pb-2">
                         A small selection of experiments, products, and
-                        interfaces made with curiosity and care.
+                        interfaces.
                     </p>
                 </div>
 
