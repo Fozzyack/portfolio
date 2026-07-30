@@ -9,36 +9,45 @@ gsap.registerPlugin(useGSAP, SplitText);
 
 const experience = [
     {
-        period: "2024 — Now",
+        period: "Aug 2025 — Present",
         role: "Software Engineer",
-        company: "Independent",
-        location: "Perth, WA",
+        company: "Equity Solar",
+        location: "Remote (Sydney)",
         description:
-            "Designing and building useful digital experiences while growing through real projects, thoughtful systems, and continuous practice.",
-        skills: "React · TypeScript · Next.js",
-    },
-    {
-        period: "2023 — 2024",
-        role: "Developer in progress",
-        company: "Personal projects",
-        location: "Remote",
-        description:
-            "Turning ideas into working products, from first sketches and data models through to polished, accessible interfaces.",
-        skills: "JavaScript · CSS · Git",
+            "Sole developer of a Virtual Power Plant that enables remote monitoring and control of residential battery systems.",
+        skills: "React · TypeScript · Next.js · Golang · PostgreSQL",
     },
     {
         period: "Ongoing",
-        role: "Always learning",
-        company: "Open source & community",
-        location: "Everywhere",
+        role: "Freelance Software Engineer",
+        company: "Independent",
+        location: "Remote",
         description:
-            "Exploring new tools, sharing what I learn, and looking for better ways to make software clear, friendly, and reliable.",
-        skills: "Curiosity · Collaboration · Craft",
+            "Building focused software solutions for businesses, from Python automation scripts and customer-facing websites to lightweight internal tools.",
+        skills: "Next.js · Golang · Python · PostgreSQL",
+    },
+    {
+        period: "Sep 2025 — Feb 2026",
+        role: "Frontend UI Library Creator",
+        company: "Hello Able",
+        location: "Perth, WA",
+        description:
+            "Created a reusable frontend UI library for Hello Able, an L&D platform provider, helping bring consistency and speed to product development.",
+        skills: "C# · .NET Framework",
+    },
+    {
+        period: "Seasonal",
+        role: "Volunteer Developer",
+        company: "Coders for Causes",
+        location: "Perth, WA",
+        description:
+            "Working alongside university students to deliver software for real clients through seasonal winter and summer programs.",
+        skills: "Client delivery · Collaboration · Volunteering",
     },
 ];
 
 export default function ExperienceSection() {
-    const root = useRef<HTMLHtmlElement>(null);
+    const root = useRef<HTMLElement>(null);
     useGSAP(
         () => {
             const header = SplitText.create(".header", { type: "words" });
@@ -96,7 +105,7 @@ export default function ExperienceSection() {
                         className="header max-w-3xl text-[clamp(3rem,6vw,6rem)] font-medium leading-[0.88] tracking-[-0.08em] text-white"
                         id="experience-title"
                     >
-                        A work in progress.
+                        Building from the ground up.
                     </h2>
 
                     <div className="mt-16 border-t border-white/15">
