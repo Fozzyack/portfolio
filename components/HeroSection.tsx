@@ -61,66 +61,42 @@ export default function HeroSection() {
                             Software Engineer.
                         </em>
                     </h1>
-                    <div className="hero-actions mt-10 flex flex-wrap items-center justify-center gap-6">
-                        <a
-                            className="group inline-flex items-center gap-4 rounded-full bg-cyan-200 px-6 py-3 text-sm font-medium text-[#0a0b0d] transition-transform hover:-translate-y-0.5"
-                            href="#work"
-                        >
-                            View my work
-                            <span
-                                className="transition-transform group-hover:translate-x-1"
-                                aria-hidden="true"
-                            >
-                                ↗
-                            </span>
-                        </a>
-                        <a
-                            className="group inline-flex items-center gap-3 text-sm text-zinc-300 transition-colors hover:text-white"
-                            href={`mailto:${profile.email}`}
-                        >
-                            Let&apos;s connect
-                            <span
-                                className="transition-transform group-hover:translate-x-1"
-                                aria-hidden="true"
-                            >
-                                ↗
-                            </span>
-                        </a>
-                    </div>
                 </div>
             </div>
 
-            <div className="hero-footer mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-5 border-t border-white/10 py-5 font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">
-                <span className="hidden items-center gap-3 sm:flex">
-                    Scroll to explore
-                    <span
-                        className="h-px w-12 bg-zinc-600"
-                        aria-hidden="true"
-                    />
-                </span>
-                <div className="flex flex-wrap gap-x-6 gap-y-2">
-                    <a
-                        className="transition-colors hover:text-white"
-                        href={profile.github}
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        GitHub ↗
-                    </a>
-                    <a
-                        className="transition-colors hover:text-white"
-                        href={profile.linkedin}
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        LinkedIn ↗
-                    </a>
-                    <a
-                        className="transition-colors hover:text-white"
-                        href={`mailto:${profile.email}`}
-                    >
-                        {profile.email}
-                    </a>
+            <div className="hero-footer w-full border-t border-white/10">
+                <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-5 py-5 font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">
+                    <span className="hidden items-center gap-3 sm:flex">
+                        Scroll to explore
+                        <span
+                            className="h-px w-12 bg-zinc-600"
+                            aria-hidden="true"
+                        />
+                    </span>
+                    <div className="flex flex-wrap gap-x-6 gap-y-2">
+                        <a
+                            className="transition-colors hover:text-white"
+                            href={profile.github}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            GitHub ↗
+                        </a>
+                        <a
+                            className="transition-colors hover:text-white"
+                            href={profile.linkedin}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            LinkedIn ↗
+                        </a>
+                        <a
+                            className="transition-colors hover:text-white"
+                            href={`mailto:${profile.email}`}
+                        >
+                            {profile.email}
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
