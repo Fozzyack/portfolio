@@ -256,8 +256,8 @@ function ProjectVisual({ index }: { index: number }) {
                 </div>
                 <div className="mt-8 text-xs leading-7 sm:text-sm sm:leading-8">
                     <p className="text-zinc-500">
-                        <span className="text-emerald-300">frasier@dev</span>
-                        :<span className="text-cyan-200">~/payroll</span>$
+                        <span className="text-emerald-300">frasier@dev</span>:
+                        <span className="text-cyan-200">~/payroll</span>$
                         <span className="ml-2 text-zinc-200">
                             python aggregate.py --financial-year 2025
                         </span>
@@ -268,12 +268,12 @@ function ProjectVisual({ index }: { index: number }) {
                             payroll records...
                         </p>
                         <p>
-                            <span className="text-emerald-300">OK</span> Aggregating
-                            28 employee entries...
+                            <span className="text-emerald-300">OK</span>{" "}
+                            Aggregating 28 employee entries...
                         </p>
                         <p>
-                            <span className="text-emerald-300">OK</span> Validating
-                            Super, totals and deductions...
+                            <span className="text-emerald-300">OK</span>{" "}
+                            Validating Super, totals and deductions...
                         </p>
                     </div>
                     <div className="mt-8 rounded-lg border border-cyan-200/20 bg-cyan-200/5 p-4 text-cyan-100 sm:p-5">
@@ -288,8 +288,8 @@ function ProjectVisual({ index }: { index: number }) {
                         </p>
                     </div>
                     <p className="mt-6 text-zinc-500">
-                        <span className="text-emerald-300">frasier@dev</span>
-                        :<span className="text-cyan-200">~/payroll</span>$
+                        <span className="text-emerald-300">frasier@dev</span>:
+                        <span className="text-cyan-200">~/payroll</span>$
                         <span className="ml-2 inline-block h-4 w-2 bg-cyan-200 align-middle" />
                     </p>
                 </div>
@@ -343,6 +343,24 @@ export default function WorkSection() {
         () => {
             const cards = gsap.utils.toArray(".card");
             const header = SplitText.create(".header", { type: "words" });
+
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: root.current,
+                    start: "top center",
+                    toggleActions: "play none none reverse",
+                },
+            })
+                .from(header.words, {
+                    opacity: 0,
+                    y: 30,
+                    stagger: 0.04,
+                })
+                .from(cards, {
+                    opacity: 0,
+                    y: 30,
+                    stagger: 0.5,
+                });
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: root.current,
@@ -358,17 +376,6 @@ export default function WorkSection() {
             tl.to(cards, {
                 xPercent: -100 * (cards.length - 1),
                 ease: "none",
-            });
-
-            gsap.from(header.words, {
-                opacity: 0,
-                y: 30,
-                stagger: 0.04,
-                scrollTrigger: {
-                    trigger: root.current,
-                    start: "top center",
-                    toggleActions: "play none none reverse",
-                },
             });
         },
         { scope: root },
