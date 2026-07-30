@@ -17,15 +17,18 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", updateScrollState);
     }, []);
 
-    useGSAP(() => {
-        gsap.from(navRef.current, {
-            opacity: 0,
-            x: 1000,
-            delay: 2.5,
-            duration: 3,
-            ease: "power3.out",
-        });
-    });
+    useGSAP(
+        () => {
+            gsap.from(navRef.current, {
+                opacity: 0,
+                x: 1000,
+                delay: 4.2,
+                duration: 2,
+                ease: "power3.out",
+            });
+        },
+        { scope: navRef },
+    );
 
     return (
         <nav
