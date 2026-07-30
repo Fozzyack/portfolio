@@ -50,7 +50,7 @@ export default function LoadingScreen() {
                     Loading portfolio
                 </p>
                 <div className="mt-5 h-px overflow-hidden bg-white/10">
-                    <div className="h-full w-1/2 animate-pulse bg-cyan-200" />
+                    <div className="h-full w-1/2 animate-[loading-bar_1.2s_ease-in-out_infinite] bg-cyan-200" />
                 </div>
             </div>
         </div>
