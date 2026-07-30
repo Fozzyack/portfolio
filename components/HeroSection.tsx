@@ -47,6 +47,7 @@ export default function HeroSection() {
             aria-labelledby="hero-title"
             ref={root}
         >
+            <div className="absolute inset-0 w-full h-full  bg-black/40" />
             <video
                 autoPlay
                 className="absolute left-0 top-0 z-[-1] h-full w-full object-cover"
@@ -55,7 +56,6 @@ export default function HeroSection() {
             >
                 <source src="/landing-vid.mp4" type="video/mp4" />
             </video>
-            <div className="absolute w-full h-full  bg-black/40" />
             <div
                 className="hero-glow absolute -right-32 top-24 -z-10 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl"
                 aria-hidden="true"
@@ -82,7 +82,7 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            <div className="hero-footer w-full border-t border-white/10">
+            <div className="relative z-10 hero-footer w-full border-t border-white/10">
                 <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-5 py-5 font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">
                     <span className="hidden items-center gap-3 sm:flex">
                         Scroll to explore
