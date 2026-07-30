@@ -1,8 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Navbar() {
+    const navRef = useRef<HTMLDivElement>(null);
     const [hasScrolled, setHasScrolled] = useState(false);
 
     useEffect(() => {
@@ -14,13 +17,24 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", updateScrollState);
     }, []);
 
+    useGSAP(() => {
+        gsap.from(navRef.current, {
+            opacity: 0,
+            x: 1000,
+            delay: 2.5,
+            duration: 1.5,
+            ease: "power3.out",
+        });
+    });
+
     return (
         <nav
-            className="fixed z-[1000] flex w-full items-center justify-center py-4"
+            className="fixed z-1000 flex w-full items-center justify-center py-4"
             aria-label="Primary navigation"
         >
             <div
                 className={`flex w-fit items-center gap-6 rounded-full border border-white/10 px-4 py-4 backdrop-blur-md transition-colors sm:gap-8 sm:px-8 ${hasScrolled ? "bg-[#0a0b0d]" : "bg-white/4"}`}
+                ref={navRef}
             >
                 <a
                     className="font-mono text-base font-bold tracking-[-0.08em] text-white"
