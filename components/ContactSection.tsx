@@ -30,7 +30,7 @@ export default function ContactSection() {
                 stagger: 0.2,
                 scrollTrigger: {
                     trigger: root.current,
-                    start: "top 10%",
+                    start: "top top",
                     toggleActions: "play none none reverse",
                 },
             });
