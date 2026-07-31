@@ -67,10 +67,10 @@ export default function HeroSection() {
             >
                 <div className="relative w-full text-center z-20">
                     <h1
-                        className="hero-header text-[clamp(4rem,13vw,12rem)] font-medium leading-[0.82] tracking-[-0.09em] text-white"
+                        className="hero-header text-[3.5rem] md:text-[14rem] font-medium leading-[0.82] tracking-[-0.09em] text-white"
                         id="hero-title"
                     >
-                        <span className="decoration-2 underline-offset-[0.12em]">
+                        <span>
                             Frasier Sundra
                             <div className="underline-animation h-1 w-full bg-cyan-300/70" />
                         </span>
