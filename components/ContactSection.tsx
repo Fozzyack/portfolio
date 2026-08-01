@@ -3,7 +3,7 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 gsap.registerPlugin(useGSAP, SplitText);
 
@@ -20,6 +20,10 @@ const contactLinks = [
 
 export default function ContactSection() {
     const root = useRef<HTMLHtmlElement>(null);
+    const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
+        "idle",
+    );
+    const [errorMessage, setErrorMessage] = useState("");
 
     useGSAP(
         () => {
@@ -37,6 +41,43 @@ export default function ContactSection() {
         },
         { scope: root },
     );
+
+    async function handleSubmit(event: React.SubmitEvent<HTMLFormElement>) {
+        event.preventDefault();
+        setStatus("sending");
+        setErrorMessage("");
+
+        const form = event.currentTarget;
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: formData.get("name"),
+                    email: formData.get("email"),
+                    message: formData.get("message"),
+                }),
+            });
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || "Unable to send your message.");
+            }
+
+            form.reset();
+            setStatus("sent");
+        } catch (error) {
+            setErrorMessage(
+                error instanceof Error
+                    ? error.message
+                    : "Unable to send your message.",
+            );
+            setStatus("error");
+        }
+    }
+
     return (
         <section
             className="border-t border-white/10 bg-[#0a0b0d] px-6 py-24 text-zinc-100 sm:px-10 sm:py-32 lg:px-16"
@@ -63,24 +104,84 @@ export default function ContactSection() {
                         </h2>
                     </div>
 
-                    <div className="flex flex-col justify-end lg:pb-2">
+                    <div className="lg:pb-2">
                         <p className="max-w-sm text-lg leading-7 text-zinc-400">
-                            I&apos;m always open to thoughtful conversations,
-                            interesting problems, and opportunities to build
-                            better things together.
+                            Tell me what you&apos;re working on, where
+                            you&apos;re stuck, or what we could build together.
                         </p>
-                        <a
-                            className="group mt-10 flex w-fit items-center gap-4 border-b border-cyan-200 pb-3 text-xl tracking-[-0.04em] text-cyan-200 transition-opacity hover:opacity-60 sm:text-2xl"
-                            href="mailto:fsundra@gmail.com"
+                        <form
+                            className="mt-10 space-y-6"
+                            onSubmit={handleSubmit}
                         >
-                            fsundra@gmail.com
-                            <span
-                                className="transition-transform group-hover:translate-x-1"
-                                aria-hidden="true"
-                            >
-                                ↗
-                            </span>
-                        </a>
+                            <div>
+                                <label
+                                    className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500"
+                                    htmlFor="contact-name"
+                                >
+                                    Name
+                                </label>
+                                <input
+                                    className="mt-3 block w-full border-b border-white/20 bg-transparent px-0 py-3 text-base text-zinc-100 outline-none transition-colors placeholder:text-zinc-600 focus:border-cyan-200"
+                                    id="contact-name"
+                                    name="name"
+                                    placeholder="Your name"
+                                    required
+                                    type="text"
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500"
+                                    htmlFor="contact-email"
+                                >
+                                    Email address
+                                </label>
+                                <input
+                                    className="mt-3 block w-full border-b border-white/20 bg-transparent px-0 py-3 text-base text-zinc-100 outline-none transition-colors placeholder:text-zinc-600 focus:border-cyan-200"
+                                    id="contact-email"
+                                    name="email"
+                                    placeholder="you@example.com"
+                                    required
+                                    type="email"
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500"
+                                    htmlFor="contact-message"
+                                >
+                                    Message
+                                </label>
+                                <textarea
+                                    className="mt-3 block min-h-32 w-full resize-y border-b border-white/20 bg-transparent px-0 py-3 text-base text-zinc-100 outline-none transition-colors placeholder:text-zinc-600 focus:border-cyan-200"
+                                    id="contact-message"
+                                    name="message"
+                                    placeholder="Tell me a little about your project"
+                                    required
+                                />
+                            </div>
+                            <div className="flex items-center justify-between gap-4 pt-2">
+                                <p
+                                    aria-live="polite"
+                                    className={`text-sm ${status === "error" ? "text-red-300" : "text-zinc-500"}`}
+                                >
+                                    {status === "sent"
+                                        ? "Message sent. I'll be in touch soon."
+                                        : status === "error"
+                                          ? errorMessage
+                                          : "Usually replies within a day."}
+                                </p>
+                                <button
+                                    className="shrink-0 border border-cyan-200 px-5 py-3 font-mono text-[10px] uppercase tracking-[0.16em] text-cyan-200 transition-colors hover:bg-cyan-200 hover:text-[#0a0b0d] disabled:cursor-wait disabled:opacity-50"
+                                    disabled={status === "sending"}
+                                    type="submit"
+                                >
+                                    {status === "sending"
+                                        ? "Sending..."
+                                        : "Send message"}
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
 
