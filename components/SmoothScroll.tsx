@@ -27,7 +27,7 @@ export default function SmoothScroll({ children }: SmoothScrollProps) {
                 autoRaf: false,
                 anchors: {
                     offset: 100,
-                    duration: 2.5,
+                    duration: 0.5,
                     immediate: false,
                 },
                 allowNestedScroll: true,
