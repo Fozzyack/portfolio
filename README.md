@@ -71,3 +71,11 @@ Most portfolio content is defined near the top of its component:
 - `components/ContactSection.tsx` for contact links
 
 Technology icons are provided by [Icons8](https://icons8.com).
+
+## Animation Notes
+
+The About section uses GSAP and ScrollTrigger for its scroll-based reveals.
+Headings use SplitText word masks, while technology badges use an
+`overflow-hidden` wrapper to clip each badge as it animates upward from below.
+The badge reveal is configured in `components/AboutSection.tsx` through the
+`.icon-badge` selector.

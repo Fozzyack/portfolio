@@ -422,7 +422,7 @@ export default function WorkSection() {
                 <div className="mt-16 flex w-max gap-6" ref={track}>
                     {projects.map((project, index) => (
                         <article
-                            className="card group flex h-[36rem] w-[calc(100vw-3rem)] max-w-[58rem] shrink-0 flex-col overflow-hidden rounded-[1.5rem] sm:h-[39rem] sm:w-[70vw] lg:w-[58vw]"
+                            className="card group flex md:h-[36rem] w-[calc(100vw-3rem)] md:max-w-[58rem] shrink-0 flex-col overflow-hidden rounded-[1.5rem] md:h-[39rem] md:w-[70vw] lg:w-[58vw]"
                             key={project.name}
                         >
                             <div
