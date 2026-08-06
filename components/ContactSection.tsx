@@ -27,11 +27,15 @@ export default function ContactSection() {
 
     useGSAP(
         () => {
-            const header = SplitText.create(".header", { type: "words" });
+            const header = SplitText.create(".header", {
+                type: "words",
+                mask: "words",
+                wordsClass: "hero-word",
+            });
             gsap.from(header.words, {
-                opacity: 0,
-                y: 30,
-                stagger: 0.2,
+                yPercent: 200,
+                stagger: 0.1,
+                duration: 1.22,
                 scrollTrigger: {
                     trigger: root.current,
                     start: "top 85%",

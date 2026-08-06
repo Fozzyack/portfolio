@@ -20,21 +20,17 @@ export default function HeroSection() {
     useGSAP(
         () => {
             const heroText = SplitText.create(".hero-header", {
-                type: "chars",
+                type: "words",
+                mask: "words",
+                wordsClass: "hero-word",
             });
 
             gsap.timeline()
-                .from(heroText.chars, {
+                .from(heroText.words, {
                     delay: 1.5,
-                    display: "inline-block",
-                    opacity: 0,
-                    y: 30,
-                    stagger: 0.05,
-                    ease: "power3.out",
-                })
-                .from(".underline-animation", {
-                    width: 0,
-                    duration: 1.5,
+                    duration: 1.0,
+                    yPercent: 200,
+                    stagger: 0.2,
                     ease: "power3.out",
                 });
         },
@@ -56,10 +52,6 @@ export default function HeroSection() {
             >
                 <source src="/landing-vid.mp4" type="video/mp4" />
             </video>
-            <div
-                className="hero-glow absolute -right-32 top-24 -z-10 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl"
-                aria-hidden="true"
-            />
 
             <div
                 className="mx-auto flex w-full max-w-7xl flex-1 items-center py-20 lg:py-24"
@@ -72,7 +64,6 @@ export default function HeroSection() {
                     >
                         <span>
                             Frasier Sundra
-                            <div className="underline-animation h-1 w-full bg-cyan-300/70" />
                         </span>
                         <br />
                         <em className="font-serif text-[0.72em] font-normal tracking-[-0.08em] text-zinc-400">

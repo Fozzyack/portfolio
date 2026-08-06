@@ -50,7 +50,11 @@ export default function ExperienceSection() {
     const root = useRef<HTMLElement>(null);
     useGSAP(
         () => {
-            const header = SplitText.create(".header", { type: "words" });
+            const header = SplitText.create(".header", {
+                type: "words",
+                mask: "words",
+                wordsClass: "header",
+            });
             const experienceCard = gsap.utils.toArray(".experience-card");
 
             const tl = gsap.timeline({
@@ -62,9 +66,10 @@ export default function ExperienceSection() {
                 },
             });
             tl.from(header.words, {
-                opacity: 0,
-                y: 30,
+                yPercent: 200,
                 stagger: 0.08,
+                duration: 1.5,
+                ease: "power3.out",
             });
 
             tl.from(

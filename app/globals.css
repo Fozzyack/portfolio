@@ -18,6 +18,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.hero-word-mask {
+    margin: -0.05em -0.08em -0.18em;
+    padding: 0.05em 0.08em 0.18em;
+}
+
+.header-mask {
+    margin: -0.05em -0.08em -0.18em;
+    padding: 0.05em 0.08em 0.18em;
+}
+
 @keyframes loading-bar {
     0% {
         transform: translateX(-100%);

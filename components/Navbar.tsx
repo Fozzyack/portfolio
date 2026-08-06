@@ -22,8 +22,8 @@ export default function Navbar() {
             gsap.from(navRef.current, {
                 opacity: 0,
                 x: 1000,
-                delay: 4.2,
-                duration: 2,
+                delay: 3.0,
+                duration: 1.5,
                 ease: "power3.out",
             });
         },

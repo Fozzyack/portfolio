@@ -89,13 +89,14 @@ export default function AboutSection() {
 
     useGSAP(
         () => {
-            const heading = SplitText.create(".heading", { type: "words" });
+            const heading = SplitText.create(".heading", { type: "words", mask: "words", wordsClass: "header"});
             const iconBadges = gsap.utils.toArray(".icon-badge");
 
             gsap.from(heading.words, {
-                opacity: 0,
-                y: 30,
-                stagger: 0.2,
+                yPercent: 200,
+                duration: 1.5,
+                stagger: 0.1,
+                ease: "power3.out",
                 scrollTrigger: {
                     trigger: root.current,
                     start: "top center",

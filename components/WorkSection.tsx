@@ -342,7 +342,11 @@ export default function WorkSection() {
     useGSAP(
         () => {
             const cards = gsap.utils.toArray(".card");
-            const header = SplitText.create(".header", { type: "words" });
+            const header = SplitText.create(".header", {
+                type: "words",
+                mask: "words",
+                wordsClass: "header",
+            });
 
             gsap.timeline({
                 scrollTrigger: {
@@ -352,9 +356,10 @@ export default function WorkSection() {
                 },
             })
                 .from(header.words, {
-                    opacity: 0,
-                    y: 30,
-                    stagger: 0.04,
+                    yPercent: 200,
+                    stagger: 0.08,
+                    duration: 1.5,
+                    ease: "power3.out",
                 })
                 .from(cards, {
                     opacity: 0,
