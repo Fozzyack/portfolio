@@ -429,7 +429,7 @@ export default function WorkSection() {
                 >
                     {projects.map((project, index) => (
                         <article
-                            className="card group flex w-full shrink-0 flex-col rounded-[1.5rem] md:h-[39rem] md:w-[70vw] md:max-w-[58rem] lg:w-[58vw]"
+                            className="card group flex w-full shrink-0 flex-col overflow-hidden rounded-[1.5rem] md:h-[39rem] md:w-[70vw] md:max-w-[58rem] lg:w-[58vw]"
                             key={project.name}
                         >
                             <div
