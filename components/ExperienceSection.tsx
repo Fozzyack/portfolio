@@ -56,37 +56,46 @@ export default function ExperienceSection() {
                 wordsClass: "header",
             });
             const experienceCard = gsap.utils.toArray(".experience-card");
-
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: root.current,
-                    start: "top 80%",
-                    end: "bottom bottom",
-                    toggleActions: "play none none reverse",
-                },
-            });
-            tl.from(header.words, {
+            gsap.from(".subheader", {
                 yPercent: 200,
                 stagger: 0.08,
                 duration: 1.5,
                 ease: "power3.out",
+                scrollTrigger: {
+                    trigger: root.current,
+                    start: "top 80%",
+                    toggleActions: "play none none reverse",
+                },
             });
 
-            tl.from(
-                experienceCard,
-                {
-                    opacity: 0,
-                    x: -30,
-                    stagger: 0.25,
+            gsap.from(header.words, {
+                yPercent: 200,
+                stagger: 0.08,
+                duration: 1.5,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: root.current,
+                    start: "top 80%",
+                    toggleActions: "play none none reverse",
                 },
-                ">",
-            );
+            });
+
+            gsap.from(experienceCard, {
+                opacity: 0,
+                x: -30,
+                stagger: 0.25,
+                scrollTrigger: {
+                    trigger: "#experience",
+                    start: "10% 80%",
+                    toggleActions: "play none none reverse",
+                },
+            });
         },
         { scope: root },
     );
     return (
         <section
-            className="border-t border-white/10 bg-[#0d0f11] px-6 py-28 text-zinc-100 sm:px-10 sm:py-36 lg:px-16"
+            className="px-6 py-28 text-zinc-100 sm:px-10 sm:py-36 lg:px-16"
             id="experience"
             aria-labelledby="experience-title"
             ref={root}
@@ -100,7 +109,7 @@ export default function ExperienceSection() {
                         />
                         02 / Experience
                     </p>
-                    <p className="header mt-8 max-w-xs text-sm leading-6 text-zinc-500">
+                    <p className="subheader mt-8 max-w-xs text-sm leading-6 text-zinc-500">
                         The places, practices, and projects shaping how I build.
                     </p>
                 </div>
@@ -113,7 +122,10 @@ export default function ExperienceSection() {
                         Building from the ground up.
                     </h2>
 
-                    <div className="mt-16 border-t border-white/15">
+                    <div
+                        id="experience"
+                        className="mt-16 border-t border-white/15"
+                    >
                         {experience.map((item, index) => (
                             <article
                                 className="experience-card grid gap-8 border-b border-white/15 py-8 sm:grid-cols-[8rem_1fr] sm:gap-10 sm:py-10"

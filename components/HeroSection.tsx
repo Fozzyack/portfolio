@@ -25,25 +25,24 @@ export default function HeroSection() {
                 wordsClass: "hero-word",
             });
 
-            gsap.timeline()
-                .from(heroText.words, {
-                    delay: 1.5,
-                    duration: 1.0,
-                    yPercent: 200,
-                    stagger: 0.2,
-                    ease: "power3.out",
-                });
+            gsap.timeline().from(heroText.words, {
+                delay: 1.5,
+                duration: 1.0,
+                yPercent: 200,
+                stagger: 0.2,
+                ease: "power3.out",
+            });
         },
         { scope: root },
     );
 
     return (
         <section
-            className="relative isolate flex min-h-screen flex-col overflow-hidden bg-[#0a0b0d] px-6 text-zinc-100 sm:px-10 lg:px-16"
+            className="relative isolate flex min-h-screen flex-col overflow-hidden px-6 text-zinc-100 sm:px-10 lg:px-16"
             aria-labelledby="hero-title"
             ref={root}
         >
-            <div className="absolute inset-0 w-full h-full  bg-black/40" />
+            <div className="absolute inset-0 w-full h-full" />
             <video
                 autoPlay
                 className="absolute left-0 top-0 z-[-1] h-full w-full object-cover"
@@ -62,9 +61,7 @@ export default function HeroSection() {
                         className="hero-header text-[3.5rem] md:text-[14rem] font-medium leading-[0.82] tracking-[-0.09em] text-white"
                         id="hero-title"
                     >
-                        <span>
-                            Frasier Sundra
-                        </span>
+                        <span>Frasier Sundra</span>
                         <br />
                         <em className="font-serif text-[0.72em] font-normal tracking-[-0.08em] text-zinc-400">
                             Software Engineer.
@@ -73,7 +70,7 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            <div className="relative z-10 hero-footer w-full border-t border-white/10">
+            <div className="relative z-10 hero-footer w-full">
                 <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-5 py-5 font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">
                     <span className="hidden items-center gap-3 sm:flex">
                         Scroll to explore

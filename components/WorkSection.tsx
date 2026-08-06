@@ -358,7 +358,7 @@ export default function WorkSection() {
                 .from(header.words, {
                     yPercent: 200,
                     stagger: 0.08,
-                    duration: 1.5,
+                    duration: 1,
                     ease: "power3.out",
                 })
                 .from(cards, {
@@ -388,7 +388,7 @@ export default function WorkSection() {
 
     return (
         <section
-            className="relative flex min-h-screen flex-col justify-center overflow-hidden border-t border-white/10 bg-[#0a0b0d] px-6 py-20 text-zinc-100 sm:px-10 sm:py-24 lg:px-16"
+            className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-[#0a0b0d] px-6 py-20 text-zinc-100 sm:px-10 sm:py-24 lg:px-16"
             id="work"
             aria-labelledby="work-title"
             ref={root}

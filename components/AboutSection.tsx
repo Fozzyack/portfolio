@@ -89,7 +89,11 @@ export default function AboutSection() {
 
     useGSAP(
         () => {
-            const heading = SplitText.create(".heading", { type: "words", mask: "words", wordsClass: "header"});
+            const heading = SplitText.create(".heading", {
+                type: "words",
+                mask: "words",
+                wordsClass: "header",
+            });
             const iconBadges = gsap.utils.toArray(".icon-badge");
 
             gsap.from(heading.words, {
@@ -104,9 +108,11 @@ export default function AboutSection() {
                 },
             });
             gsap.from(iconBadges, {
-                opacity: 0,
-                y: 30,
+                yPercent: 110,
+                duration: 1,
                 stagger: 0.08,
+                opacity: 0,
+                ease: "power3.out",
                 scrollTrigger: {
                     trigger: root.current,
                     start: "30% 40%",
@@ -119,7 +125,7 @@ export default function AboutSection() {
 
     return (
         <section
-            className="border-t border-white/10 bg-[#0d0f11] px-6 py-28 text-zinc-100 sm:px-10 sm:py-36 lg:px-16"
+            className="border-t border-white/10 px-6 py-28 text-zinc-100 sm:px-10 sm:py-36 lg:px-16"
             id="about"
             aria-labelledby="about-title"
             ref={root}
@@ -175,15 +181,17 @@ export default function AboutSection() {
                                     <dd className="mt-3 flex flex-wrap gap-2">
                                         {technologies.map(({ name, icon }) => (
                                             <span
-                                                className="icon-badge inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1.5 text-xs text-zinc-300"
+                                                className="inline-flex rounded-full"
                                                 key={name}
                                             >
-                                                <img
-                                                    alt=""
-                                                    className="h-4 w-4 object-contain"
-                                                    src={icon}
-                                                />
-                                                {name}
+                                                <span className="icon-badge inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1.5 text-xs text-zinc-300">
+                                                    <img
+                                                        alt=""
+                                                        className="h-4 w-4 object-contain"
+                                                        src={icon}
+                                                    />
+                                                    {name}
+                                                </span>
                                             </span>
                                         ))}
                                     </dd>
