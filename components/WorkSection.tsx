@@ -348,24 +348,27 @@ export default function WorkSection() {
                 wordsClass: "header",
             });
 
-            gsap.timeline({
+            gsap.from(header.words, {
+                yPercent: 200,
+                stagger: 0.1,
+                duration: 1.5,
+                ease: "power3.out",
                 scrollTrigger: {
                     trigger: root.current,
-                    start: "top center",
+                    start: "30% 80%",
                     toggleActions: "play none none reverse",
                 },
-            })
-                .from(header.words, {
-                    yPercent: 200,
-                    stagger: 0.08,
-                    duration: 1,
-                    ease: "power3.out",
-                })
-                .from(cards, {
-                    opacity: 0,
-                    y: 30,
-                    stagger: 0.5,
-                });
+            });
+            gsap.from(cards, {
+                opacity: 0,
+                y: 30,
+                stagger: 0.8,
+                scrollTrigger: {
+                    trigger: root.current,
+                    start: "40% 70%",
+                    toggleActions: "play none none reverse",
+                },
+            });
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: root.current,
