@@ -16,7 +16,7 @@ export default function SmoothScroll({ children }: SmoothScrollProps) {
     const lenisRef = useRef<LenisRef>(null);
     useGSAP(() => {
         function raf(time: number) {
-            lenisRef.current?.lenis?.raf(time * 40);
+            lenisRef.current?.lenis?.raf(time * 50);
             ScrollTrigger.update();
         }
         gsap.ticker.add(raf);
