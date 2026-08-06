@@ -23,10 +23,9 @@ export default function SmoothScroll({ children }: SmoothScrollProps) {
             root
             options={{
                 autoRaf: false,
-                lerp: 0.05,
+                lerp: 0.08,
                 wheelMultiplier: 1.2,
                 anchors: {
-                    offset: 100,
                     duration: 2.5,
                 },
             }}
