@@ -391,7 +391,7 @@ export default function WorkSection() {
 
     return (
         <section
-            className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-[#0a0b0d] px-6 py-20 text-zinc-100 sm:px-10 sm:py-24 lg:px-16"
+            className="relative flex min-h-screen flex-col justify-center bg-[#0a0b0d] px-6 py-20 text-zinc-100 sm:px-10 sm:py-24 lg:px-16"
             id="work"
             aria-labelledby="work-title"
             ref={root}
