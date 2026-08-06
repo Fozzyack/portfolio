@@ -102,8 +102,8 @@ export default function AboutSection() {
                 stagger: 0.1,
                 ease: "power3.out",
                 scrollTrigger: {
-                    trigger: root.current,
-                    start: "top center",
+                    trigger: "#about-title",
+                    start: "top 80%",
                     toggleActions: "play none none reverse",
                 },
             });

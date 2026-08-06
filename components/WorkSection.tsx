@@ -355,7 +355,7 @@ export default function WorkSection() {
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: root.current,
-                    start: "30% 80%",
+                    start: "top 80%",
                     toggleActions: "play none none reverse",
                 },
             });
@@ -365,25 +365,29 @@ export default function WorkSection() {
                 stagger: 0.8,
                 scrollTrigger: {
                     trigger: root.current,
-                    start: "40% 70%",
+                    start: "top 70%",
                     toggleActions: "play none none reverse",
                 },
             });
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: root.current,
-                    pin: true,
-                    pinSpacing: true,
-                    scrub: 1,
-                    start: "center center",
-                    end: "+=3500",
-                    snap: 1 / (cards.length - 1),
-                },
-            });
+            const desktopMedia = gsap.matchMedia();
 
-            tl.to(cards, {
-                xPercent: -100 * (cards.length - 1),
-                ease: "none",
+            desktopMedia.add("(min-width: 768px)", () => {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: root.current,
+                        pin: root.current,
+                        pinSpacing: "margin",
+                        scrub: 1,
+                        start: "top top",
+                        end: "+=3000",
+                        snap: 1 / (cards.length - 1),
+                    },
+                });
+
+                tl.to(cards, {
+                    xPercent: -100 * (cards.length - 1),
+                    ease: "none",
+                });
             });
         },
         { scope: root },
@@ -391,7 +395,7 @@ export default function WorkSection() {
 
     return (
         <section
-            className="relative flex min-h-screen flex-col justify-center bg-[#0a0b0d] px-6 py-20 text-zinc-100 sm:px-10 sm:py-24 lg:px-16"
+            className="relative flex min-h-screen flex-col justify-center overflow-x-clip bg-[#0a0b0d] px-6 py-20 text-zinc-100 sm:px-10 sm:py-24 lg:px-16"
             id="work"
             aria-labelledby="work-title"
             ref={root}
@@ -419,10 +423,13 @@ export default function WorkSection() {
                     </p>
                 </div>
 
-                <div className="mt-16 flex w-max gap-6" ref={track}>
+                <div
+                    className="mt-16 flex w-full flex-col gap-6 md:w-max md:flex-row"
+                    ref={track}
+                >
                     {projects.map((project, index) => (
                         <article
-                            className="card group flex md:h-[36rem] w-[calc(100vw-3rem)] md:max-w-[58rem] shrink-0 flex-col overflow-hidden rounded-[1.5rem] md:h-[39rem] md:w-[70vw] lg:w-[58vw]"
+                            className="card group flex w-full shrink-0 flex-col rounded-[1.5rem] md:h-[39rem] md:w-[70vw] md:max-w-[58rem] lg:w-[58vw]"
                             key={project.name}
                         >
                             <div

@@ -74,7 +74,7 @@ export default function ExperienceSection() {
                 duration: 1.5,
                 ease: "power3.out",
                 scrollTrigger: {
-                    trigger: root.current,
+                    trigger: "#experience-title",
                     start: "top 80%",
                     toggleActions: "play none none reverse",
                 },
@@ -86,7 +86,7 @@ export default function ExperienceSection() {
                 stagger: 0.25,
                 scrollTrigger: {
                     trigger: "#experience",
-                    start: "10% 80%",
+                    start: "20% 80%",
                     toggleActions: "play none none reverse",
                 },
             });
