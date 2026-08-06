@@ -35,10 +35,8 @@ export default function LoadingScreen() {
         <div
             aria-label="Loading portfolio"
             aria-live="polite"
-            className={`fixed inset-0 z-[100] flex items-center justify-center bg-[#0a0b0d] text-zinc-100 transition-opacity duration-700 ${
-                isLoading
-                    ? "opacity-100"
-                    : "pointer-events-none opacity-0"
+            className={`fixed inset-0 z-[200] flex items-center justify-center bg-[#0a0b0d] text-zinc-100 transition-opacity duration-700 ${
+                isLoading ? "opacity-100" : "pointer-events-none opacity-0"
             }`}
             role="status"
         >

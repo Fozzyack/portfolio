@@ -32,7 +32,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className="fixed z-1000 flex w-full items-center justify-center py-4"
+            className="fixed z-100 flex w-full items-center justify-center py-4"
             aria-label="Primary navigation"
         >
             <div
