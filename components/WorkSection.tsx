@@ -365,8 +365,9 @@ export default function WorkSection() {
                 stagger: 0.8,
                 scrollTrigger: {
                     trigger: root.current,
-                    start: "top 70%",
+                    start: "top 40%",
                     toggleActions: "play none none reverse",
+                    markers: true,
                 },
             });
             const desktopMedia = gsap.matchMedia();
