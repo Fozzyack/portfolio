@@ -367,7 +367,6 @@ export default function WorkSection() {
                     trigger: root.current,
                     start: "top 40%",
                     toggleActions: "play none none reverse",
-                    markers: true,
                 },
             });
             const desktopMedia = gsap.matchMedia();

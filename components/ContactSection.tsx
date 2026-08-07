@@ -84,7 +84,7 @@ export default function ContactSection() {
 
     return (
         <section
-            className="border-t border-white/10 bg-[#0a0b0d] px-6 py-24 text-zinc-100 sm:px-10 sm:py-32 lg:px-16"
+            className="border-t border-white/10 bg-[#0a0b0d] px-6 pt-24 text-zinc-100 sm:px-10 sm:pt-32 lg:px-16 py-12"
             id="contact"
             aria-labelledby="contact-title"
             ref={root}
@@ -189,7 +189,7 @@ export default function ContactSection() {
                     </div>
                 </div>
 
-                <div className="flex flex-col justify-between gap-8 border-t border-white/10 pt-5 text-sm sm:flex-row sm:items-end">
+                <div className="flex flex-col justify-between gap-8  pt-5 text-sm sm:flex-row sm:items-end">
                     <div>
                         <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">
                             Find me online
