@@ -12,7 +12,7 @@ const experience = [
         period: "Aug 2025 — Present",
         role: "Software Engineer",
         company: "Equity Solar",
-        location: "Remote (Sydney)",
+        location: "Remote (Sydney, NSW)",
         description:
             "Sole developer of a Virtual Power Plant that enables remote monitoring and control of residential battery systems.",
         skills: "React · TypeScript · Next.js · Golang · PostgreSQL",
@@ -21,7 +21,7 @@ const experience = [
         period: "Ongoing",
         role: "Freelance Software Engineer",
         company: "Independent",
-        location: "Remote",
+        location: "Remote (Perth, WA)",
         description:
             "Building focused software solutions for businesses, from Python automation scripts and customer-facing websites to lightweight internal tools.",
         skills: "Next.js · Golang · Python · PostgreSQL",
