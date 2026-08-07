@@ -362,6 +362,7 @@ export default function WorkSection() {
             gsap.from(cards, {
                 opacity: 0,
                 y: 30,
+                delay: 0.5,
                 stagger: 0.8,
                 scrollTrigger: {
                     trigger: root.current,
