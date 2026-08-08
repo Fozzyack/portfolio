@@ -49,12 +49,6 @@ export default function Navbar() {
                 <div className="hidden items-center gap-5 text-xs text-zinc-400 sm:flex">
                     <a
                         className="transition-colors hover:text-white"
-                        href="#work"
-                    >
-                        Projects
-                    </a>
-                    <a
-                        className="transition-colors hover:text-white"
                         href="#about"
                     >
                         About
@@ -64,6 +58,12 @@ export default function Navbar() {
                         href="#experience"
                     >
                         Experience
+                    </a>
+                    <a
+                        className="transition-colors hover:text-white"
+                        href="#work"
+                    >
+                        Projects
                     </a>
                     <a
                         className="transition-colors hover:text-white"
