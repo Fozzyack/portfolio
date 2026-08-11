@@ -20,16 +20,15 @@ export default function HeroSection() {
     useGSAP(
         () => {
             const heroText = SplitText.create(".hero-header", {
-                type: "words",
-                mask: "words",
-                wordsClass: "hero-word",
+                type: "chars",
             });
 
-            gsap.timeline().from(heroText.words, {
+            gsap.timeline().from(heroText.chars, {
+                opacity: 0,
+                y: 30,
                 delay: 1.5,
                 duration: 1.0,
-                yPercent: 200,
-                stagger: 0.2,
+                stagger: 0.05,
                 ease: "power3.out",
             });
         },
