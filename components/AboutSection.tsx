@@ -146,13 +146,11 @@ export default function AboutSection() {
                         className="heading max-w-4xl text-[clamp(2.75rem,6vw,6rem)] font-medium leading-[0.92] tracking-[-0.07em] text-white"
                         id="about-title"
                     >
-                        Learning by building thoughtful software.
+                        Building thoughtful software.
                     </h2>
                     <p className="mt-10 max-w-2xl text-lg leading-8 text-zinc-400 sm:text-xl">
-                        I&apos;m Frasier, a software engineer based in Perth,
-                        WA. As I begin my career, I&apos;m focused on growing
-                        through the process of making useful, well-crafted
-                        digital experiences.
+                        I&apos;m Frasier, a Perth-based software engineer building
+                        useful software and solving practical problems.
                     </p>
 
                     <dl className="mt-16 grid max-w-2xl gap-6 border-t border-white/10 pt-6 sm:grid-cols-3 sm:gap-8">
