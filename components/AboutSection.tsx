@@ -16,15 +16,11 @@ const details = [
 
 const techStack = [
     {
-        label: "Frontend",
+        label: "Frameworks",
         technologies: [
             {
                 name: "React",
                 icon: "https://img.icons8.com/color/48/react-native.png",
-            },
-            {
-                name: "TypeScript",
-                icon: "https://img.icons8.com/color/48/typescript.png",
             },
             {
                 name: "Next.js",
@@ -34,11 +30,19 @@ const techStack = [
                 name: "Tailwind CSS",
                 icon: "https://img.icons8.com/color/48/tailwind_css.png",
             },
+            {
+                name: ".NET",
+                icon: "https://img.icons8.com/color/48/net-framework.png",
+            },
         ],
     },
     {
-        label: "Backend",
+        label: "Languages",
         technologies: [
+            {
+                name: "TypeScript",
+                icon: "https://img.icons8.com/color/48/typescript.png",
+            },
             {
                 name: "Go",
                 icon: "https://img.icons8.com/color/48/golang.png",
@@ -52,8 +56,12 @@ const techStack = [
                 icon: "https://img.icons8.com/nolan/64/c-sharp-logo.png",
             },
             {
-                name: ".NET",
-                icon: "https://img.icons8.com/color/48/net-framework.png",
+                name: "C",
+                icon: "https://img.icons8.com/color/48/c-programming.png",
+            },
+            {
+                name: "Zig",
+                icon: "https://cdn.simpleicons.org/zig/F7A41D",
             },
         ],
     },
