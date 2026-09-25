@@ -44,20 +44,20 @@ const techStack = [
         label: "Languages",
         technologies: [
             {
-                name: "SQL",
-                icon: "https://img.icons8.com/color/48/sql.png",
+                name: "Zig",
+                icon: "https://cdn.simpleicons.org/zig/F7A41D",
             },
             {
-                name: "Bash",
-                icon: "https://cdn.simpleicons.org/gnubash/4EAA25",
-            },
-            {
-                name: "TypeScript",
-                icon: "https://img.icons8.com/color/48/typescript.png",
+                name: "C",
+                icon: "https://img.icons8.com/color/48/c-programming.png",
             },
             {
                 name: "Go",
                 icon: "https://img.icons8.com/color/48/golang.png",
+            },
+            {
+                name: "TypeScript",
+                icon: "https://img.icons8.com/color/48/typescript.png",
             },
             {
                 name: "Python",
@@ -68,12 +68,12 @@ const techStack = [
                 icon: "https://img.icons8.com/nolan/64/c-sharp-logo.png",
             },
             {
-                name: "C",
-                icon: "https://img.icons8.com/color/48/c-programming.png",
+                name: "Bash",
+                icon: "https://cdn.simpleicons.org/gnubash/4EAA25",
             },
             {
-                name: "Zig",
-                icon: "https://cdn.simpleicons.org/zig/F7A41D",
+                name: "SQL",
+                icon: "https://img.icons8.com/color/48/sql.png",
             },
         ],
     },
@@ -82,19 +82,19 @@ const techStack = [
         technologies: [
             {
                 name: "AWS",
-                icon: "https://cdn.simpleicons.org/amazonaws/FF9900",
+                icon: "https://img.icons8.com/color/48/amazon-web-services.png",
             },
             {
-                name: "Azure",
-                icon: "https://cdn.simpleicons.org/microsoftazure/0078D4",
+                name: "Google Cloud",
+                icon: "https://img.icons8.com/color/48/google-cloud.png",
             },
             {
                 name: "Vercel",
                 icon: "https://cdn.simpleicons.org/vercel/FFFFFF",
             },
             {
-                name: "Docker Compose",
-                icon: "https://cdn.simpleicons.org/dockercompose/2496ED",
+                name: "Docker",
+                icon: "https://img.icons8.com/color/48/docker.png",
             },
             {
                 name: "GitHub Actions",
@@ -112,10 +112,6 @@ const techStack = [
             {
                 name: "Git",
                 icon: "https://img.icons8.com/color/48/git.png",
-            },
-            {
-                name: "Docker",
-                icon: "https://img.icons8.com/color/48/docker.png",
             },
             {
                 name: "Linux",
@@ -227,7 +223,7 @@ export default function AboutSection() {
                                                 className="inline-flex rounded-full"
                                                 key={name}
                                             >
-                                                <span className="icon-badge inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1.5 text-xs text-zinc-300">
+                                                <span className="icon-badge inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1.5 text-xs text-zinc-300 transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan-300/60 hover:bg-white/[0.06]">
                                                     <img
                                                         alt=""
                                                         className="h-4 w-4 object-contain"
