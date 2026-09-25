@@ -109,9 +109,11 @@ export default function ExperienceSection() {
                         />
                         02 / Experience
                     </p>
-                    <p className="subheader mt-8 max-w-xs text-sm leading-6 text-zinc-500">
-                        The places, practices, and projects shaping how I build.
-                    </p>
+                    {/*
+                        <p className="subheader mt-8 max-w-xs text-sm leading-6 text-zinc-500">
+                            The places, practices, and projects shaping how I build.
+                        </p>
+                    */}
                 </div>
 
                 <div>
