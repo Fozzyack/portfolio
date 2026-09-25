@@ -41,7 +41,7 @@ export default function HeroSection() {
             aria-labelledby="hero-title"
             ref={root}
         >
-            <div className="absolute inset-0 w-full h-full" />
+            <div className="absolute inset-0 w-full h-full bg-black/60" />
             <video
                 autoPlay
                 className="absolute left-0 top-0 z-[-1] h-full w-full object-cover"
