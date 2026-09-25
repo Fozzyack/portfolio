@@ -16,7 +16,7 @@ const details = [
 
 const techStack = [
     {
-        label: "Frameworks",
+        label: "Frameworks & Runtime",
         technologies: [
             {
                 name: "React",
@@ -34,11 +34,23 @@ const techStack = [
                 name: ".NET",
                 icon: "https://img.icons8.com/color/48/net-framework.png",
             },
+            {
+                name: "Node.js",
+                icon: "https://img.icons8.com/color/48/nodejs.png",
+            },
         ],
     },
     {
         label: "Languages",
         technologies: [
+            {
+                name: "SQL",
+                icon: "https://img.icons8.com/color/48/sql.png",
+            },
+            {
+                name: "Bash",
+                icon: "https://cdn.simpleicons.org/gnubash/4EAA25",
+            },
             {
                 name: "TypeScript",
                 icon: "https://img.icons8.com/color/48/typescript.png",
@@ -62,6 +74,31 @@ const techStack = [
             {
                 name: "Zig",
                 icon: "https://cdn.simpleicons.org/zig/F7A41D",
+            },
+        ],
+    },
+    {
+        label: "Cloud & Deployment",
+        technologies: [
+            {
+                name: "AWS",
+                icon: "https://cdn.simpleicons.org/amazonaws/FF9900",
+            },
+            {
+                name: "Azure",
+                icon: "https://cdn.simpleicons.org/microsoftazure/0078D4",
+            },
+            {
+                name: "Vercel",
+                icon: "https://cdn.simpleicons.org/vercel/FFFFFF",
+            },
+            {
+                name: "Docker Compose",
+                icon: "https://cdn.simpleicons.org/dockercompose/2496ED",
+            },
+            {
+                name: "GitHub Actions",
+                icon: "https://cdn.simpleicons.org/githubactions/2088FF",
             },
         ],
     },
