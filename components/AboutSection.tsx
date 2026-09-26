@@ -127,6 +127,7 @@ const techStack = [
 
 export default function AboutSection() {
     const root = useRef<HTMLElement>(null);
+    const techStackRef = useRef<HTMLDivElement>(null);
 
     useGSAP(
         () => {
@@ -135,7 +136,10 @@ export default function AboutSection() {
                 mask: "words",
                 wordsClass: "header",
             });
-            const iconBadges = gsap.utils.toArray(".icon-badge");
+            const iconBadges = gsap.utils.toArray<HTMLSpanElement>(
+                ".icon-badge",
+                techStackRef.current,
+            );
 
             gsap.from(heading.words, {
                 yPercent: 200,
@@ -155,8 +159,8 @@ export default function AboutSection() {
                 opacity: 0,
                 ease: "power3.out",
                 scrollTrigger: {
-                    trigger: root.current,
-                    start: "30% 40%",
+                    trigger: techStackRef.current,
+                    start: "top 85%",
                     toggleActions: "play none none reverse",
                 },
             });
@@ -207,7 +211,10 @@ export default function AboutSection() {
                         ))}
                     </dl>
 
-                    <div className="mt-16 max-w-2xl border-t border-white/10 pt-6">
+                    <div
+                        className="mt-16 max-w-2xl border-t border-white/10 pt-6"
+                        ref={techStackRef}
+                    >
                         <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">
                             Tools I work with
                         </p>
@@ -220,10 +227,10 @@ export default function AboutSection() {
                                     <dd className="mt-3 flex flex-wrap gap-2">
                                         {technologies.map(({ name, icon }) => (
                                             <span
-                                                className="inline-flex rounded-full"
+                                                className="icon-badge inline-flex rounded-full"
                                                 key={name}
                                             >
-                                                <span className="icon-badge inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1.5 text-xs text-zinc-300 transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan-300/60 hover:bg-white/[0.06]">
+                                                <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1.5 text-xs text-zinc-300 transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan-300/60 hover:bg-white/[0.06]">
                                                     <img
                                                         alt=""
                                                         className="h-4 w-4 object-contain"
