@@ -63,6 +63,17 @@ const projects = [
         website: "",
         stack: "Python · Flask",
     },
+    {
+        number: "06",
+        name: "TinyWins",
+        type: "Habit tracker · Web app",
+        description:
+            "A habit tracker that turns daily actions into a contribution-style activity board.",
+        className: "bg-[#10201b] text-[#d9f99d]",
+        github: "",
+        website: "https://tinywins.frasier.dev",
+        stack: "",
+    },
 ];
 
 function ProjectVisual({ index }: { index: number }) {
@@ -303,6 +314,19 @@ function ProjectVisual({ index }: { index: number }) {
                 <p className="font-mono text-xs uppercase tracking-[0.16em] text-[#20231f]/50">
                     No preview available
                 </p>
+            </div>
+        );
+    }
+
+    if (index === 5) {
+        return (
+            <div className="relative h-full overflow-hidden bg-[#10201b]">
+                <iframe
+                    className="absolute inset-0 h-full w-full border-0 bg-white"
+                    src="https://tinywins.frasier.dev"
+                    title="TinyWins live preview"
+                    loading="lazy"
+                />
             </div>
         );
     }
