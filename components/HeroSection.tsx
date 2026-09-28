@@ -33,6 +33,10 @@ export default function HeroSection() {
                     type: "chars",
                     aria: "none",
                 });
+                const lastName = SplitText.create(".hero-last-name", {
+                    type: "chars",
+                    aria: "none",
+                });
 
                 const roleLabels =
                     root.current?.querySelectorAll(".hero-role-label") ?? [];
@@ -89,13 +93,14 @@ export default function HeroSection() {
                         0.12,
                     )
                     .from(
-                        ".hero-last-name",
+                        lastName.chars,
                         {
                             yPercent: 115,
                             rotation: 1.5,
                             filter: "blur(10px)",
                             transformOrigin: "15% 100%",
                             duration: 1.65,
+                            stagger: 0.065,
                         },
                         0.48,
                     )
