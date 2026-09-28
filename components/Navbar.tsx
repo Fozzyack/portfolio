@@ -4,7 +4,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import compactLogo from "@/public/logo-compact.webp";
 
 gsap.registerPlugin(useGSAP);
 
@@ -98,11 +97,11 @@ export default function Navbar() {
                     onClick={() => setIsMenuOpen(false)}
                 >
                     <Image
-                        src={compactLogo}
+                        src="/logo-compact.webp"
                         alt=""
-                        width={70}
-                        sizes="70px"
-                        className="h-auto"
+                        width={280}
+                        height={90}
+                        className="h-auto w-[70px]"
                         loading="eager"
                     />
                 </a>

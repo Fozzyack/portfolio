@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import logo from "@/public/logo.webp";
 
 export default function LoadingScreen() {
     const [isLoading, setIsLoading] = useState(true);
@@ -44,11 +43,11 @@ export default function LoadingScreen() {
         >
             <div className="w-48 text-center">
                 <Image
-                    src={logo}
+                    src="/logo.webp"
                     alt="Frasier Sundra"
-                    width={160}
-                    sizes="160px"
-                    className="mx-auto h-auto"
+                    width={576}
+                    height={199}
+                    className="mx-auto h-auto w-40"
                     loading="eager"
                     fetchPriority="high"
                 />
