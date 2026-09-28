@@ -104,7 +104,7 @@ export default function SmallerProjectsSection() {
                             04 / From GitHub
                         </p>
                         <h2
-                            className="smaller-projects-heading mt-5 text-[clamp(3rem,6vw,6rem)] font-medium leading-[0.86] tracking-[-0.08em]"
+                            className="smaller-projects-heading mt-5 text-[clamp(3rem,6vw,6rem)] font-medium leading-[1.05] tracking-[-0.08em]"
                             id="smaller-projects-title"
                         >
                             Smaller builds.

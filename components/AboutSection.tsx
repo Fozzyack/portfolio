@@ -188,7 +188,7 @@ export default function AboutSection() {
 
                 <div>
                     <h2
-                        className="heading max-w-4xl text-[clamp(2.75rem,6vw,6rem)] font-medium leading-[0.92] tracking-[-0.07em] text-white"
+                        className="heading max-w-4xl text-[clamp(2.75rem,6vw,6rem)] font-medium leading-[1.05] tracking-[-0.07em] text-white"
                         id="about-title"
                     >
                         Building thoughtful software.

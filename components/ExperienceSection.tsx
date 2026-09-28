@@ -118,7 +118,7 @@ export default function ExperienceSection() {
 
                 <div>
                     <h2
-                        className="header max-w-3xl text-[clamp(3rem,6vw,6rem)] font-medium leading-[0.88] tracking-[-0.08em] text-white"
+                        className="header max-w-3xl text-[clamp(3rem,6vw,6rem)] font-medium leading-[1.05] tracking-[-0.08em] text-white"
                         id="experience-title"
                     >
                         Building from the ground up.
