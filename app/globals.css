@@ -22,24 +22,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: var(--font-syne), Arial, sans-serif;
     font-size: clamp(3.75rem, min(18vw, 24svh), 15rem);
-    line-height: 0.95;
-    letter-spacing: -0.075em;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.055em;
 }
 
 .hero-name-mask {
     display: block;
     overflow: hidden;
-    /* Extra room preserves the serif's overhang and descenders. */
+    /* Extra room keeps the animated glyphs clear of the mask edges. */
     margin: -0.12em -0.16em -0.2em;
     padding: 0.12em 0.16em 0.2em;
-}
-
-.hero-last-name {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.12em;
-    line-height: 1;
-    letter-spacing: -0.065em;
 }
 
 .hero-word-mask {

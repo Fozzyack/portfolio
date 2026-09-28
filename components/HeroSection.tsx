@@ -150,7 +150,7 @@ export default function HeroSection() {
             >
                 <div className="w-full text-center">
                     <h1
-                        className="hero-name font-sans font-medium text-[#f2f0eb]"
+                        className="hero-name text-[#f2f0eb]"
                         id="hero-title"
                         aria-label={profile.name}
                     >
@@ -160,9 +160,9 @@ export default function HeroSection() {
                             </span>
                         </span>
                         <span className="hero-name-mask" aria-hidden="true">
-                            <em className="hero-last-name inline-block font-normal">
+                            <span className="hero-last-name inline-block">
                                 Sundra
-                            </em>
+                            </span>
                         </span>
                     </h1>
                     <p className="hero-role mt-8 flex items-center justify-center gap-3 font-mono text-[10px] tracking-[0.08em] text-zinc-400 sm:mt-10 sm:text-xs">
