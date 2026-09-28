@@ -404,7 +404,7 @@ export default function WorkSection() {
             <div className="mx-auto w-full max-w-7xl">
                 <div className="flex flex-col justify-between gap-10 sm:flex-row sm:items-end">
                     <div>
-                        <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-cyan-200/80">
+                        <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-cyan-200/80 md:mt-10">
                             <span
                                 className="h-px w-8 bg-cyan-300/70"
                                 aria-hidden="true"
