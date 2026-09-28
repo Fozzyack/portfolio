@@ -2,7 +2,9 @@
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import compactLogo from "@/public/logo-compact.webp";
 
 gsap.registerPlugin(useGSAP);
 
@@ -90,18 +92,19 @@ export default function Navbar() {
                 ref={navRef}
             >
                 <a
-                    className="inline-flex min-h-16 items-center text-2xl font-semibold tracking-[-0.08em] text-[#f2f0eb] outline-offset-4 focus-visible:outline focus-visible:outline-zinc-300"
+                    className="inline-flex min-h-16 shrink-0 items-center outline-offset-4 focus-visible:outline focus-visible:outline-zinc-300"
                     href="#top"
-                    aria-label="Home"
+                    aria-label="Frasier Sundra — home"
                     onClick={() => setIsMenuOpen(false)}
                 >
-                    FS
-                    <span
-                        className="ml-0.5 font-mono text-lg font-normal text-zinc-500"
-                        aria-hidden="true"
-                    >
-                        _
-                    </span>
+                    <Image
+                        src={compactLogo}
+                        alt=""
+                        width={70}
+                        sizes="70px"
+                        className="h-auto"
+                        loading="eager"
+                    />
                 </a>
                 <button
                     ref={menuButtonRef}

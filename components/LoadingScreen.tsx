@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
+import logo from "@/public/logo.webp";
 
 export default function LoadingScreen() {
     const [isLoading, setIsLoading] = useState(true);
@@ -41,9 +43,15 @@ export default function LoadingScreen() {
             role="status"
         >
             <div className="w-48 text-center">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-cyan-200/50 font-mono text-sm tracking-[-0.08em] text-cyan-200">
-                    FS
-                </div>
+                <Image
+                    src={logo}
+                    alt="Frasier Sundra"
+                    width={160}
+                    sizes="160px"
+                    className="mx-auto h-auto"
+                    loading="eager"
+                    fetchPriority="high"
+                />
                 <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-500">
                     Loading portfolio
                 </p>
