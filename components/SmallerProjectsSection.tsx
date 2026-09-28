@@ -110,10 +110,6 @@ export default function SmallerProjectsSection() {
                             Smaller builds.
                         </h2>
                     </div>
-                    <p className="max-w-xs text-sm leading-6 text-zinc-500">
-                        Experiments, tools, and works in progress from my pinned
-                        GitHub repositories.
-                    </p>
                 </div>
 
                 <div className="smaller-projects-grid grid border-l border-t border-white/10 sm:grid-cols-2 lg:grid-cols-3">
