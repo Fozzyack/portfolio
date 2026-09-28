@@ -32,6 +32,17 @@ const projects = [
     },
     {
         number: "03",
+        name: "TinyWins",
+        type: "Habit tracker · Web app",
+        description:
+            "A habit tracker that turns daily actions into a contribution-style activity board.",
+        className: "bg-[#10201b] text-[#d9f99d]",
+        github: "",
+        website: "https://tinywins.frasier.dev",
+        stack: "",
+    },
+    {
+        number: "04",
         name: "Hera's Arena",
         type: "Tournament · Tracking tool",
         description:
@@ -42,7 +53,7 @@ const projects = [
         stack: "",
     },
     {
-        number: "04",
+        number: "05",
         name: "Payroll Aggregator",
         type: "CLI · Python",
         description:
@@ -53,7 +64,7 @@ const projects = [
         stack: "",
     },
     {
-        number: "05",
+        number: "06",
         name: "ACICIS Program Dashboard",
         type: "Dashboard · Operations",
         description:
@@ -62,17 +73,6 @@ const projects = [
         github: "",
         website: "",
         stack: "Python · Flask",
-    },
-    {
-        number: "06",
-        name: "TinyWins",
-        type: "Habit tracker · Web app",
-        description:
-            "A habit tracker that turns daily actions into a contribution-style activity board.",
-        className: "bg-[#10201b] text-[#d9f99d]",
-        github: "",
-        website: "https://tinywins.frasier.dev",
-        stack: "",
     },
 ];
 
@@ -258,7 +258,7 @@ function ProjectVisual({ index }: { index: number }) {
         );
     }
 
-    if (index === 3) {
+    if (index === 4) {
         return (
             <div className="h-full overflow-hidden bg-[#101214] p-5 font-mono text-zinc-100 sm:p-8">
                 <div className="flex items-center justify-between border-b border-white/10 pb-5 text-[10px] uppercase tracking-[0.16em] text-zinc-500">
@@ -308,7 +308,7 @@ function ProjectVisual({ index }: { index: number }) {
         );
     }
 
-    if (index === 4) {
+    if (index === 5) {
         return (
             <div className="flex h-full items-center justify-center bg-[#f1f0ec] p-5 text-[#20231f] sm:p-8">
                 <p className="font-mono text-xs uppercase tracking-[0.16em] text-[#20231f]/50">
@@ -318,7 +318,7 @@ function ProjectVisual({ index }: { index: number }) {
         );
     }
 
-    if (index === 5) {
+    if (index === 2) {
         return (
             <div className="relative h-full overflow-hidden bg-[#10201b]">
                 <iframe
