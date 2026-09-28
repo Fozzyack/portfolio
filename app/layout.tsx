@@ -1,13 +1,8 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import { Geist, Geist_Mono, Syne } from "next/font/google";
+import { Geist_Mono, Syne } from "next/font/google";
 import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
-
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
 
 const geistMono = Geist_Mono({
     variable: "--font-geist-mono",
@@ -17,7 +12,6 @@ const geistMono = Geist_Mono({
 const syne = Syne({
     variable: "--font-syne",
     subsets: ["latin"],
-    weight: "600",
     display: "swap",
 });
 
@@ -35,7 +29,7 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} h-full antialiased`}
+            className={`${geistMono.variable} ${syne.variable} h-full antialiased`}
         >
             <body className="min-h-full flex flex-col">
                 <SmoothScroll>{children}</SmoothScroll>

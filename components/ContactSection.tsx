@@ -101,7 +101,7 @@ export default function ContactSection() {
                             Have a project in mind?
                         </p>
                         <h2
-                            className="header mt-8 max-w-4xl text-[clamp(3.5rem,9vw,9rem)] font-medium leading-[0.82] tracking-[-0.1em]"
+                            className="header mt-8 max-w-4xl text-[clamp(3.5rem,9vw,9rem)] font-medium leading-[1.05] tracking-[-0.1em]"
                             id="contact-title"
                         >
                             Let&apos;s make something useful.

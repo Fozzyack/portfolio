@@ -412,7 +412,7 @@ export default function WorkSection() {
                             03 / Selected work
                         </p>
                         <h2
-                            className="header mt-8 max-w-3xl text-[clamp(3rem,7vw,7rem)] font-medium leading-[0.86] tracking-[-0.08em] text-white"
+                            className="header mt-8 max-w-3xl text-[clamp(3rem,7vw,7rem)] font-medium leading-[1.05] tracking-[-0.08em] text-white"
                             id="work-title"
                         >
                             Things I&apos;ve built.
