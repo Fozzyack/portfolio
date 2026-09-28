@@ -82,7 +82,7 @@ export default function HeroSection() {
                         {
                             yPercent: 115,
                             opacity: 0,
-                            filter: "blur(6px)",
+                            filter: "blur(10px)",
                             duration: 1.25,
                             stagger: 0.065,
                         },
@@ -93,6 +93,7 @@ export default function HeroSection() {
                         {
                             yPercent: 115,
                             rotation: 1.5,
+                            filter: "blur(10px)",
                             transformOrigin: "15% 100%",
                             duration: 1.65,
                         },
