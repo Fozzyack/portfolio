@@ -19,15 +19,8 @@ const projects = [
         name: "http-server",
         language: "C",
         description:
-            "A work-in-progress HTTP server exploring TCP networking, HTTP parsing, and POSIX threads.",
+            "A HTTP server exploring TCP networking, HTTP parsing, and POSIX threads. Built only using the standard glibc library",
         href: "https://github.com/Fozzyack/http-server",
-    },
-    {
-        name: "simple-fuzzy-finder",
-        language: "C++",
-        description:
-            "A small terminal fuzzy finder built with the ncurses library.",
-        href: "https://github.com/Fozzyack/simple-fuzzy-finder",
     },
     {
         name: "cpu-cache-latency",
@@ -37,11 +30,11 @@ const projects = [
         href: "https://github.com/Fozzyack/cpu-cache-latency",
     },
     {
-        name: "dotfiles",
-        language: "Lua",
+        name: "simple-fuzzy-finder",
+        language: "C++",
         description:
-            "My development environment configuration for Hyprland, Neovim, tmux, Ghostty, and more.",
-        href: "https://github.com/Fozzyack/dotfiles",
+            "A small terminal fuzzy finder built with the ncurses library.",
+        href: "https://github.com/Fozzyack/simple-fuzzy-finder",
     },
     {
         name: "price-watch",
@@ -49,6 +42,13 @@ const projects = [
         description:
             "A price checker that fetches product pages and extracts formatted prices.",
         href: "https://github.com/Fozzyack/price-watch",
+    },
+    {
+        name: "dotfiles",
+        language: "Lua",
+        description:
+            "My development environment configuration for Hyprland, Neovim, tmux, Ghostty, and more.",
+        href: "https://github.com/Fozzyack/dotfiles",
     },
 ];
 
