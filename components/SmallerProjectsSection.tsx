@@ -93,7 +93,8 @@ export default function SmallerProjectsSection() {
 
     return (
         <section
-            className="border-t border-white/10 bg-[#0a0b0d] px-6 py-20 text-zinc-100 sm:px-10 sm:py-24 lg:px-16"
+            className="min-h-svh border-t border-white/10 bg-[#0a0b0d] px-6 py-20 text-zinc-100 sm:px-10 sm:py-24 lg:flex lg:flex-col lg:justify-center lg:px-16"
+            id="smaller-builds"
             aria-labelledby="smaller-projects-title"
             ref={root}
         >
@@ -104,7 +105,7 @@ export default function SmallerProjectsSection() {
                             04 / From GitHub
                         </p>
                         <h2
-                            className="smaller-projects-heading mt-5 text-[clamp(3rem,6vw,6rem)] font-medium leading-[1.05] tracking-[-0.08em]"
+                            className="smaller-projects-heading mt-5 text-[clamp(3rem,6vw,6rem)] font-medium leading-[0.86] tracking-[-0.08em]"
                             id="smaller-projects-title"
                         >
                             Smaller builds.

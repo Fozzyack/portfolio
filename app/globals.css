@@ -37,13 +37,14 @@ body {
     padding: 0.12em 0.16em 0.2em;
 }
 
-.hero-word-mask,
-.header-mask,
-.smaller-projects-word-mask {
-    /* Give Syne's descenders room inside the animated clipping area.
-       Matching margins preserve word spacing and the surrounding layout. */
-    margin: -0.12em -0.1em -0.3em;
-    padding: 0.12em 0.1em 0.3em;
+.hero-word-mask {
+    margin: -0.05em -0.08em -0.18em;
+    padding: 0.05em 0.08em 0.18em;
+}
+
+.header-mask {
+    margin: -0.05em -0.08em -0.18em;
+    padding: 0.05em 0.08em 0.18em;
 }
 
 @keyframes terminal-cursor {
