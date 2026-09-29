@@ -43,6 +43,17 @@ const projects = [
     },
     {
         number: "04",
+        name: "TinyWins",
+        type: "Product · Habit tracker",
+        description:
+            "A habit tracker that turns daily actions into a contribution map, so streaks and momentum are visible at a glance.",
+        className: "bg-[#f6f7f4] text-[#122019]",
+        github: "",
+        website: "https://tinywins.frasier.dev",
+        stack: "",
+    },
+    {
+        number: "05",
         name: "Payroll Aggregator",
         type: "CLI · Python",
         description:
@@ -53,7 +64,7 @@ const projects = [
         stack: "",
     },
     {
-        number: "05",
+        number: "06",
         name: "ACICIS Program Dashboard",
         type: "Dashboard · Operations",
         description:
@@ -249,6 +260,42 @@ function ProjectVisual({ index }: { index: number }) {
 
     if (index === 3) {
         return (
+            <div className="relative h-full overflow-hidden bg-[#f6f7f4] p-5 text-[#122019] sm:p-8">
+                <iframe
+                    className="absolute inset-0 z-10 h-full w-full border-0 bg-white"
+                    src="https://tinywins.frasier.dev"
+                    title="TinyWins live preview"
+                    loading="lazy"
+                />
+                <div className="relative flex h-full flex-col justify-between">
+                    <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.16em] text-[#122019]/50">
+                        <span>TinyWins / Activity</span>
+                        <span>Last 26 weeks</span>
+                    </div>
+                    <div className="grid grid-cols-[repeat(26,minmax(0,1fr))] grid-rows-7 gap-1.5">
+                        {Array.from({ length: 182 }).map((_, i) => (
+                            <span
+                                className={[
+                                    "aspect-square rounded-[3px] bg-[#e1e6df]",
+                                    "aspect-square rounded-[3px] bg-[#bfe3c8]",
+                                    "aspect-square rounded-[3px] bg-[#83d19a]",
+                                    "aspect-square rounded-[3px] bg-[#3fbb68]",
+                                    "aspect-square rounded-[3px] bg-[#1a8f47]",
+                                ][(i * 7 + i) % 5]}
+                                key={i}
+                            />
+                        ))}
+                    </div>
+                    <p className="font-serif text-4xl italic leading-none tracking-[-0.06em] sm:text-6xl">
+                        Small steps, every day.
+                    </p>
+                </div>
+            </div>
+        );
+    }
+
+    if (index === 4) {
+        return (
             <div className="h-full overflow-hidden bg-[#101214] p-5 font-mono text-zinc-100 sm:p-8">
                 <div className="flex items-center justify-between border-b border-white/10 pb-5 text-[10px] uppercase tracking-[0.16em] text-zinc-500">
                     <span>payroll-aggregator</span>
@@ -297,7 +344,7 @@ function ProjectVisual({ index }: { index: number }) {
         );
     }
 
-    if (index === 4) {
+    if (index === 5) {
         return (
             <div className="flex h-full items-center justify-center bg-[#f1f0ec] p-5 text-[#20231f] sm:p-8">
                 <p className="font-mono text-xs uppercase tracking-[0.16em] text-[#20231f]/50">
