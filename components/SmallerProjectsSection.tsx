@@ -19,7 +19,7 @@ const projects = [
         name: "http-server",
         language: "C",
         description:
-            "A HTTP server exploring TCP networking, HTTP parsing, and POSIX threads. Built only using the standard glibc library",
+            "A HTTP server exploring TCP networking, HTTP parsing, and POSIX threads.The project has no third-party library dependencies. Its only direct shared-library dependency is glibc",
         href: "https://github.com/Fozzyack/http-server",
     },
     {
