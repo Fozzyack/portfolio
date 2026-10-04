@@ -12,6 +12,7 @@ const links = [
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#work" },
     { label: "Smaller builds", href: "#smaller-builds" },
+    { label: "Blog", href: "https://frasier.lol" },
     { label: "Contact", href: "#contact" },
 ];
 
