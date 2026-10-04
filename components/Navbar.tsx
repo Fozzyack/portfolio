@@ -12,8 +12,8 @@ const links = [
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#work" },
     { label: "Smaller builds", href: "#smaller-builds" },
-    { label: "Blog", href: "https://frasier.lol" },
     { label: "Contact", href: "#contact" },
+    { label: "Blog", href: "https://frasier.lol" },
 ];
 
 export default function Navbar() {
@@ -124,11 +124,24 @@ export default function Navbar() {
                     {links.map((link) => (
                         <li key={link.href}>
                             <a
-                                className="flex min-h-11 items-center underline-offset-8 transition-colors hover:text-[#f2f0eb] hover:underline focus-visible:text-white focus-visible:outline focus-visible:outline-zinc-300 motion-reduce:transition-none"
+                                className={`flex min-h-11 items-center gap-2 underline-offset-8 transition-colors hover:text-[#f2f0eb] hover:underline focus-visible:text-white focus-visible:outline focus-visible:outline-zinc-300 motion-reduce:transition-none ${link.href.startsWith("https://") ? "text-[#f2f0eb]" : ""}`}
                                 href={link.href}
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 {link.label}
+                                {link.href.startsWith("https://") && (
+                                    <>
+                                        <span className="sr-only">
+                                            {" "}(external site)
+                                        </span>
+                                        <span
+                                            className="text-zinc-500"
+                                            aria-hidden="true"
+                                        >
+                                            ↗
+                                        </span>
+                                    </>
+                                )}
                             </a>
                         </li>
                     ))}
