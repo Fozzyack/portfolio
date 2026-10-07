@@ -44,11 +44,11 @@ const projects = [
         href: "https://github.com/Fozzyack/price-watch",
     },
     {
-        name: "dotfiles",
-        language: "Lua",
+        name: "zig-blog",
+        language: "Zig",
         description:
-            "My development environment configuration for Hyprland, Neovim, tmux, Ghostty, and more.",
-        href: "https://github.com/Fozzyack/dotfiles",
+            "A tiny static blog generator in Zig, with Markdown posts and Tree-sitter syntax highlighting.",
+        href: "https://github.com/Fozzyack/zig-blog",
     },
 ];
 
