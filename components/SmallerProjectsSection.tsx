@@ -93,15 +93,15 @@ export default function SmallerProjectsSection() {
 
     return (
         <section
-            className="min-h-svh border-t border-white/10 bg-[#0a0b0d] px-6 py-20 text-zinc-100 sm:px-10 sm:py-24 lg:flex lg:flex-col lg:justify-center lg:px-16"
+            className="min-h-svh border-t border-teal/20 bg-background px-6 py-20 text-foreground sm:px-10 sm:py-24 lg:flex lg:flex-col lg:justify-center lg:px-16"
             id="smaller-builds"
             aria-labelledby="smaller-projects-title"
             ref={root}
         >
             <div className="mx-auto w-full max-w-7xl">
-                <div className="flex flex-col justify-between gap-8 border-b border-white/10 pb-10 sm:flex-row sm:items-end">
+                <div className="flex flex-col justify-between gap-8 border-b border-teal/20 pb-10 sm:flex-row sm:items-end">
                     <div>
-                        <p className="font-mono text-xs uppercase tracking-[0.18em] text-cyan-200/80">
+                        <p className="font-mono text-xs uppercase tracking-[0.18em] text-accent">
                             04 / From GitHub
                         </p>
                         <h2
@@ -113,10 +113,10 @@ export default function SmallerProjectsSection() {
                     </div>
                 </div>
 
-                <div className="smaller-projects-grid grid border-l border-t border-white/10 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="smaller-projects-grid grid border-l border-t border-teal/20 sm:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project) => (
                         <a
-                            className="smaller-project-card group flex min-h-64 flex-col justify-between border-b border-r border-white/10 p-6 transition-colors hover:bg-cyan-200 hover:text-[#0a0b0d] sm:p-8"
+                            className="smaller-project-card group flex min-h-64 flex-col justify-between border-b border-r border-teal/20 p-6 transition-colors hover:bg-accent hover:text-background sm:p-8"
                             href={project.href}
                             key={project.name}
                             target="_blank"
@@ -131,10 +131,10 @@ export default function SmallerProjectsSection() {
                                 </span>
                             </div>
                             <div>
-                                <p className="text-sm leading-6 text-zinc-500 transition-colors group-hover:text-[#0a0b0d]/65">
+                                <p className="text-sm leading-6 text-muted transition-colors group-hover:text-background/80">
                                     {project.description}
                                 </p>
-                                <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500 transition-colors group-hover:text-[#0a0b0d]/55">
+                                <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.16em] text-muted transition-colors group-hover:text-background/80">
                                     {project.language}
                                 </p>
                             </div>

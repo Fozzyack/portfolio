@@ -14,7 +14,7 @@ const projects = [
         type: "Web app · Software tool",
         description:
             "A remote control centre for monitoring and managing residential solar batteries at Equity Solar.",
-        className: "bg-[#17191c] text-zinc-100",
+        className: "bg-mantle text-foreground",
         github: "",
         website: "https://vppstudio.equitysolar.com.au",
         stack: "",
@@ -25,7 +25,7 @@ const projects = [
         type: "Product · Web app",
         description:
             "A guided quoting tool for helping customers price the right solar system for their home.",
-        className: "bg-[#d6e7ff] text-[#10233c]",
+        className: "bg-selection text-foreground",
         github: "",
         website: "https://solar.frasier.dev",
         stack: "",
@@ -36,7 +36,7 @@ const projects = [
         type: "Tournament · Tracking tool",
         description:
             "A lightweight tool for tracking Age of Empires II tournament participants throughout the competition.",
-        className: "bg-[#f3d4bf] text-[#351b15]",
+        className: "bg-accent text-background",
         github: "",
         website: "https://heras-arena.vercel.app/",
         stack: "",
@@ -47,7 +47,7 @@ const projects = [
         type: "Product · Habit tracker",
         description:
             "A habit tracker that turns daily actions into a contribution map, so streaks and momentum are visible at a glance.",
-        className: "bg-[#f6f7f4] text-[#122019]",
+        className: "bg-retro-green-bright text-background",
         github: "",
         website: "https://tinywins.frasier.dev",
         stack: "",
@@ -58,7 +58,7 @@ const projects = [
         type: "CLI · Python",
         description:
             "A command-line tool for quickly aggregating payroll data into an ATO-ready document.",
-        className: "bg-[#dfe4e8] text-[#172027]",
+        className: "bg-mantle text-foreground",
         github: "",
         website: "",
         stack: "",
@@ -69,7 +69,7 @@ const projects = [
         type: "Dashboard · Operations",
         description:
             "An operations dashboard for managing overseas student programs to Indonesia and monitoring participant progress.",
-        className: "bg-[#e8e3d8] text-[#20231f]",
+        className: "bg-foreground text-background",
         github: "",
         website: "",
         stack: "Python · Flask",
@@ -79,34 +79,34 @@ const projects = [
 function ProjectVisual({ index }: { index: number }) {
     if (index === 0) {
         return (
-            <div className="relative flex h-full flex-col overflow-hidden border border-white/4 bg-[#090a0b] p-5 text-zinc-100 sm:p-8">
+            <div className="relative flex h-full flex-col overflow-hidden border border-teal/10 bg-mantle p-5 text-foreground sm:p-8">
                 <iframe
-                    className="absolute inset-0 z-10 h-full w-full border-0 bg-white"
+                    className="absolute inset-0 z-10 h-full w-full border-0 bg-mantle"
                     src="https://vppstudio.equitysolar.com.au"
                     title="VPP Studio live preview"
                     loading="lazy"
                 />{" "}
                 <div
-                    className="flex items-center justify-between border-b border-white/10 pb-5 font-mono text-[10px] uppercase
-            tracking-[0.16em] text-zinc-500"
+                    className="flex items-center justify-between border-b border-teal/20 pb-5 font-mono text-[10px] uppercase
+            tracking-[0.16em] text-muted"
                 >
                     <div className="flex items-center gap-3">
                         <span
                             className="flex items-center gap-1.5"
                             aria-hidden="true"
                         >
-                            <span className="h-2 w-2 rounded-full bg-red-400" />
-                            <span className="h-2 w-2 rounded-full bg-yellow-300" />
-                            <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                            <span className="h-2 w-2 rounded-full bg-retro-red" />
+                            <span className="h-2 w-2 rounded-full bg-retro-yellow" />
+                            <span className="h-2 w-2 rounded-full bg-retro-green" />
                         </span>
                         <span>VPP Studio / Overview</span>
                     </div>
-                    <span className="text-emerald-300">System live</span>
+                    <span className="text-retro-green-bright">System live</span>
                 </div>
                 <div className="mt-6 grid flex-1 gap-3 sm:grid-cols-2">
-                    <div className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#111315] p-4 sm:p-5">
+                    <div className="flex flex-col justify-between rounded-xl border border-teal/20 bg-background p-4 sm:p-5">
                         <div>
-                            <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-500">
+                            <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted">
                                 Battery SOC
                             </p>
                             <p className="mt-3 text-4xl font-medium tracking-[-0.08em] sm:text-6xl">
@@ -114,28 +114,28 @@ function ProjectVisual({ index }: { index: number }) {
                             </p>
                         </div>
                         <div>
-                            <div className="h-1.5 overflow-hidden rounded-full bg-white/10">
-                                <div className="h-full w-[84%] rounded-full bg-cyan-200" />
+                            <div className="h-1.5 overflow-hidden rounded-full bg-surface">
+                                <div className="h-full w-[84%] rounded-full bg-teal" />
                             </div>
-                            <p className="mt-3 text-xs text-zinc-500">
+                            <p className="mt-3 text-xs text-muted">
                                 Average across fleet
                             </p>
                         </div>
                     </div>
-                    <div className="rounded-xl border border-white/10 bg-[#111315] p-4 sm:p-5">
+                    <div className="rounded-xl border border-teal/20 bg-background p-4 sm:p-5">
                         <div className="flex items-start justify-between">
                             <div>
-                                <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-500">
+                                <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted">
                                     SOC trend
                                 </p>
                                 <p className="mt-2 text-2xl font-medium tracking-[-0.06em] sm:text-4xl">
                                     84{" "}
-                                    <span className="text-sm text-zinc-500">
+                                    <span className="text-sm text-muted">
                                         %
                                     </span>
                                 </p>
                             </div>
-                            <span className="rounded-full bg-cyan-300/10 px-2 py-1 font-mono text-[10px] text-cyan-200">
+                            <span className="rounded-full bg-teal/10 px-2 py-1 font-mono text-[10px] text-teal-bright">
                                 Current
                             </span>
                         </div>
@@ -149,47 +149,47 @@ function ProjectVisual({ index }: { index: number }) {
                         >
                             <path
                                 d="M0 48H420"
-                                stroke="white"
+                                stroke="var(--foreground)"
                                 strokeOpacity=".1"
                             />
                             <path
                                 d="M0 35 C35 30, 50 38, 84 27 S132 31, 166 22 S214 25, 248 16 S300 22, 332 15 S382 19, 420 9"
-                                stroke="#a5f3fc"
+                                stroke="var(--teal)"
                                 strokeWidth="2"
                                 vectorEffect="non-scaling-stroke"
                             />
                         </svg>
                     </div>
-                    <div className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#111315] p-4 sm:p-5">
+                    <div className="flex flex-col justify-between rounded-xl border border-teal/20 bg-background p-4 sm:p-5">
                         <div className="flex items-start justify-between">
-                            <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-500">
+                            <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted">
                                 Current running schedule
                             </p>
-                            <span className="h-2 w-2 rounded-full bg-emerald-300 shadow-[0_0_12px_rgba(110,231,183,0.7)]" />
+                            <span className="h-2 w-2 rounded-full bg-retro-green-bright shadow-[0_0_12px_var(--green)]" />
                         </div>
                         <div>
                             <p className="mt-5 text-3xl font-medium tracking-[-0.08em] sm:text-5xl">
                                 Import Focus
                             </p>
-                            <p className="mt-3 text-xs text-zinc-500">
+                            <p className="mt-3 text-xs text-muted">
                                 Active schedule
                             </p>
                         </div>
                     </div>
-                    <div className="rounded-xl border border-white/10 bg-[#111315] p-4 sm:p-5">
+                    <div className="rounded-xl border border-teal/20 bg-background p-4 sm:p-5">
                         <div className="flex items-start justify-between">
                             <div>
-                                <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-500">
+                                <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted">
                                     Recent change
                                 </p>
                                 <p className="mt-2 text-2xl font-medium tracking-[-0.06em] sm:text-4xl">
                                     +4.8{" "}
-                                    <span className="text-sm text-zinc-500">
+                                    <span className="text-sm text-muted">
                                         kW
                                     </span>
                                 </p>
                             </div>
-                            <span className="rounded-full bg-emerald-300/10 px-2 py-1 font-mono text-[10px] text-emerald-300">
+                            <span className="rounded-full bg-retro-green/10 px-2 py-1 font-mono text-[10px] text-retro-green-bright">
                                 Last 24 hrs
                             </span>
                         </div>
@@ -203,22 +203,22 @@ function ProjectVisual({ index }: { index: number }) {
                         >
                             <path
                                 d="M0 48H420"
-                                stroke="white"
+                                stroke="var(--foreground)"
                                 strokeOpacity=".1"
                             />
                             <path
                                 d="M0 30H420"
-                                stroke="white"
+                                stroke="var(--foreground)"
                                 strokeOpacity=".1"
                             />
                             <path
                                 d="M0 42 C35 38, 48 46, 82 34 S132 38, 164 26 S212 30, 246 18 S292 27, 325 20 S380 23, 420 8"
-                                stroke="#c084fc"
+                                stroke="var(--accent)"
                                 strokeWidth="3"
                                 vectorEffect="non-scaling-stroke"
                             />
                         </svg>
-                        <div className="mt-2 flex justify-between font-mono text-[9px] uppercase tracking-[0.12em] text-zinc-600">
+                        <div className="mt-2 flex justify-between font-mono text-[9px] uppercase tracking-[0.12em] text-muted">
                             <span>06:00</span>
                             <span>12:00</span>
                             <span>18:00</span>
@@ -231,16 +231,16 @@ function ProjectVisual({ index }: { index: number }) {
 
     if (index === 1) {
         return (
-            <div className="relative h-full overflow-hidden bg-[#eaf2ff] p-5 sm:p-8">
+            <div className="relative h-full overflow-hidden bg-selection p-5 sm:p-8">
                 <iframe
-                    className="absolute inset-0 z-10 h-full w-full border-0 bg-white"
+                    className="absolute inset-0 z-10 h-full w-full border-0 bg-selection"
                     src="https://equity-solar-quote-tool-nine.vercel.app/"
                     title="Solar quote tool live preview"
                     loading="lazy"
                 />
-                <div className="absolute -right-12 top-10 h-40 w-40 rounded-full border-[20px] border-[#75a6e8] sm:h-64 sm:w-64" />
-                <div className="absolute -bottom-12 -left-12 h-44 w-44 rounded-full bg-[#b6d1f5] sm:h-64 sm:w-64" />
-                <div className="relative flex h-full flex-col justify-between text-[#10233c]">
+                <div className="absolute -right-12 top-10 h-40 w-40 rounded-full border-[20px] border-teal sm:h-64 sm:w-64" />
+                <div className="absolute -bottom-12 -left-12 h-44 w-44 rounded-full bg-teal-dim sm:h-64 sm:w-64" />
+                <div className="relative flex h-full flex-col justify-between text-cream">
                     <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.16em]">
                         <span>Vol. 04</span>
                         <span>Read / Think / Make</span>
@@ -251,7 +251,7 @@ function ProjectVisual({ index }: { index: number }) {
                             <br />
                             Notes
                         </p>
-                        <div className="mt-6 h-px w-full bg-[#10233c]/30" />
+                        <div className="mt-6 h-px w-full bg-cream/30" />
                     </div>
                 </div>
             </div>
@@ -260,15 +260,15 @@ function ProjectVisual({ index }: { index: number }) {
 
     if (index === 3) {
         return (
-            <div className="relative h-full overflow-hidden bg-[#f6f7f4] p-5 text-[#122019] sm:p-8">
+            <div className="relative h-full overflow-hidden bg-retro-green-bright p-5 text-background sm:p-8">
                 <iframe
-                    className="absolute inset-0 z-10 h-full w-full border-0 bg-white"
+                    className="absolute inset-0 z-10 h-full w-full border-0 bg-retro-green-bright"
                     src="https://tinywins.frasier.dev"
                     title="TinyWins live preview"
                     loading="lazy"
                 />
                 <div className="relative flex h-full flex-col justify-between">
-                    <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.16em] text-[#122019]/50">
+                    <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.16em] text-background/80">
                         <span>TinyWins / Activity</span>
                         <span>Last 26 weeks</span>
                     </div>
@@ -276,11 +276,11 @@ function ProjectVisual({ index }: { index: number }) {
                         {Array.from({ length: 182 }).map((_, i) => (
                             <span
                                 className={[
-                                    "aspect-square rounded-[3px] bg-[#e1e6df]",
-                                    "aspect-square rounded-[3px] bg-[#bfe3c8]",
-                                    "aspect-square rounded-[3px] bg-[#83d19a]",
-                                    "aspect-square rounded-[3px] bg-[#3fbb68]",
-                                    "aspect-square rounded-[3px] bg-[#1a8f47]",
+                                    "aspect-square rounded-[3px] bg-foreground",
+                                    "aspect-square rounded-[3px] bg-retro-green",
+                                    "aspect-square rounded-[3px] bg-teal-dim",
+                                    "aspect-square rounded-[3px] bg-selection",
+                                    "aspect-square rounded-[3px] bg-surface",
                                 ][(i * 7 + i) % 5]}
                                 key={i}
                             />
@@ -296,48 +296,55 @@ function ProjectVisual({ index }: { index: number }) {
 
     if (index === 4) {
         return (
-            <div className="h-full overflow-hidden bg-[#101214] p-5 font-mono text-zinc-100 sm:p-8">
-                <div className="flex items-center justify-between border-b border-white/10 pb-5 text-[10px] uppercase tracking-[0.16em] text-zinc-500">
+            <div className="h-full overflow-hidden bg-mantle p-5 font-mono text-foreground sm:p-8">
+                <div className="flex items-center justify-between border-b border-teal/20 pb-5 text-[10px] uppercase tracking-[0.16em] text-muted">
                     <span>payroll-aggregator</span>
                     <span>Python CLI</span>
                 </div>
                 <div className="mt-8 text-xs leading-7 sm:text-sm sm:leading-8">
-                    <p className="text-zinc-500">
-                        <span className="text-emerald-300">frasier@dev</span>:
-                        <span className="text-cyan-200">~/payroll</span>$
-                        <span className="ml-2 text-zinc-200">
+                    <p className="text-muted">
+                        <span className="text-retro-green-bright">
+                            frasier@dev
+                        </span>
+                        :
+                        <span className="text-teal">~/payroll</span>$
+                        <span className="ml-2 text-foreground">
                             python aggregate.py --financial-year 2025
                         </span>
                     </p>
-                    <div className="mt-6 space-y-1 text-zinc-400">
+                    <div className="mt-6 space-y-1 text-foreground/75">
                         <p>
-                            <span className="text-emerald-300">OK</span> Loading
+                            <span className="text-retro-green-bright">OK</span>{" "}
+                            Loading
                             payroll records...
                         </p>
                         <p>
-                            <span className="text-emerald-300">OK</span>{" "}
+                            <span className="text-retro-green-bright">OK</span>{" "}
                             Aggregating 28 employee entries...
                         </p>
                         <p>
-                            <span className="text-emerald-300">OK</span>{" "}
+                            <span className="text-retro-green-bright">OK</span>{" "}
                             Validating Super, totals and deductions...
                         </p>
                     </div>
-                    <div className="mt-8 rounded-lg border border-cyan-200/20 bg-cyan-200/5 p-4 text-cyan-100 sm:p-5">
-                        <p className="text-[10px] uppercase tracking-[0.14em] text-cyan-200/60">
+                    <div className="mt-8 rounded-lg border border-teal/30 bg-teal/5 p-4 text-teal-bright sm:p-5">
+                        <p className="text-[10px] uppercase tracking-[0.14em] text-teal">
                             Output generated
                         </p>
                         <p className="mt-3 text-lg tracking-[-0.04em] sm:text-2xl">
                             ato_payroll_2025.pdf
                         </p>
-                        <p className="mt-2 text-xs text-cyan-200/60">
+                        <p className="mt-2 text-xs text-teal">
                             Ready for review · 1.8 MB
                         </p>
                     </div>
-                    <p className="mt-6 text-zinc-500">
-                        <span className="text-emerald-300">frasier@dev</span>:
-                        <span className="text-cyan-200">~/payroll</span>$
-                        <span className="ml-2 inline-block h-4 w-2 bg-cyan-200 align-middle" />
+                    <p className="mt-6 text-muted">
+                        <span className="text-retro-green-bright">
+                            frasier@dev
+                        </span>
+                        :
+                        <span className="text-teal">~/payroll</span>$
+                        <span className="ml-2 inline-block h-4 w-2 bg-accent align-middle" />
                     </p>
                 </div>
             </div>
@@ -346,8 +353,8 @@ function ProjectVisual({ index }: { index: number }) {
 
     if (index === 5) {
         return (
-            <div className="flex h-full items-center justify-center bg-[#f1f0ec] p-5 text-[#20231f] sm:p-8">
-                <p className="font-mono text-xs uppercase tracking-[0.16em] text-[#20231f]/50">
+            <div className="flex h-full items-center justify-center bg-foreground p-5 text-background sm:p-8">
+                <p className="font-mono text-xs uppercase tracking-[0.16em] text-background/80">
                     No preview available
                 </p>
             </div>
@@ -355,16 +362,16 @@ function ProjectVisual({ index }: { index: number }) {
     }
 
     return (
-        <div className="relative h-full overflow-hidden bg-[#edc5aa] p-5 sm:p-8">
+        <div className="relative h-full overflow-hidden bg-accent p-5 sm:p-8">
             <iframe
-                className="absolute inset-0 z-10 h-full w-full border-0 bg-white"
+                className="absolute inset-0 z-10 h-full w-full border-0 bg-accent"
                 src="https://heras-arena.vercel.app/"
                 title="Hera's Arena live preview"
                 loading="lazy"
             />
-            <div className="absolute -right-16 top-12 h-48 w-48 rounded-full bg-[#c45d48] sm:h-72 sm:w-72" />
-            <div className="absolute bottom-0 left-1/2 h-3/5 w-px bg-[#351b15]/35" />
-            <div className="relative flex h-full flex-col justify-between text-[#351b15]">
+            <div className="absolute -right-16 top-12 h-48 w-48 rounded-full bg-retro-red sm:h-72 sm:w-72" />
+            <div className="absolute bottom-0 left-1/2 h-3/5 w-px bg-background/35" />
+            <div className="relative flex h-full flex-col justify-between text-background">
                 <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.16em]">
                     <span>Common Ground</span>
                     <span>Perth / WA</span>
@@ -373,7 +380,7 @@ function ProjectVisual({ index }: { index: number }) {
                     <p className="max-w-[10rem] text-3xl font-medium leading-[0.9] tracking-[-0.07em] sm:text-5xl">
                         Meet where you are.
                     </p>
-                    <span className="mb-1 flex h-12 w-12 items-center justify-center rounded-full border border-[#351b15] text-xl">
+                    <span className="mb-1 flex h-12 w-12 items-center justify-center rounded-full border border-background text-xl">
                         ↗
                     </span>
                 </div>
@@ -443,7 +450,7 @@ export default function WorkSection() {
 
     return (
         <section
-            className="relative flex min-h-screen flex-col justify-center overflow-x-clip bg-[#0a0b0d] px-6 py-20 text-zinc-100 sm:px-10 sm:py-24 lg:px-16"
+            className="relative flex min-h-screen flex-col justify-center overflow-x-clip bg-background px-6 py-20 text-foreground sm:px-10 sm:py-24 lg:px-16"
             id="work"
             aria-labelledby="work-title"
             ref={root}
@@ -451,21 +458,21 @@ export default function WorkSection() {
             <div className="mx-auto w-full max-w-7xl">
                 <div className="flex flex-col justify-between gap-10 sm:flex-row sm:items-end">
                     <div>
-                        <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-cyan-200/80 md:mt-10">
+                        <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-accent md:mt-10">
                             <span
-                                className="h-px w-8 bg-cyan-300/70"
+                                className="h-px w-8 bg-accent/70"
                                 aria-hidden="true"
                             />
                             03 / Selected work
                         </p>
                         <h2
-                            className="header mt-8 max-w-3xl text-[clamp(3rem,7vw,7rem)] font-medium leading-[0.86] tracking-[-0.08em] text-white"
+                            className="header mt-8 max-w-3xl text-[clamp(3rem,7vw,7rem)] font-medium leading-[0.86] tracking-[-0.08em] text-cream"
                             id="work-title"
                         >
                             Things I&apos;ve built.
                         </h2>
                     </div>
-                    <p className="header max-w-xs text-sm leading-6 text-zinc-500 sm:pb-2">
+                    <p className="header max-w-xs text-sm leading-6 text-muted sm:pb-2">
                         A small selection of experiments, products, and
                         interfaces.
                     </p>
@@ -484,33 +491,33 @@ export default function WorkSection() {
                                 className={`relative h-[25rem] shrink-0 overflow-hidden ${project.className} sm:h-[32rem]`}
                             >
                                 <ProjectVisual index={index} />
-                                <span className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full bg-black/10 font-mono text-xs backdrop-blur-sm sm:right-8 sm:top-8">
+                                <span className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full bg-background/10 font-mono text-xs backdrop-blur-sm sm:right-8 sm:top-8">
                                     {project.number}
                                 </span>
                             </div>
-                            <div className="flex min-h-0 flex-1 flex-col gap-5 border-b border-white/15 py-5 sm:flex-row sm:items-start sm:justify-between">
+                            <div className="flex min-h-0 flex-1 flex-col gap-5 border-b border-teal/25 py-5 sm:flex-row sm:items-start sm:justify-between">
                                 <div>
-                                    <h3 className="text-2xl font-medium tracking-[-0.05em] text-white">
+                                    <h3 className="text-2xl font-medium tracking-[-0.05em] text-cream">
                                         {project.name}
                                     </h3>
-                                    <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-cyan-200/70">
+                                    <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-teal">
                                         {project.type}
                                     </p>
                                     {project.stack && (
-                                        <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-500">
+                                        <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.12em] text-muted">
                                             {project.stack}
                                         </p>
                                     )}
                                 </div>
                                 <div className="flex items-end justify-between gap-6 sm:max-w-sm">
-                                    <p className="text-sm leading-6 text-zinc-500">
+                                    <p className="text-sm leading-6 text-muted">
                                         {project.description}
                                     </p>
                                     {(project.github || project.website) && (
                                         <div className="flex shrink-0 gap-4">
                                             {project.website && (
                                                 <a
-                                                    className="text-sm text-zinc-300 transition-colors hover:text-cyan-200"
+                                                    className="text-sm text-foreground/80 transition-colors hover:text-accent"
                                                     href={project.website}
                                                     target="_blank"
                                                     rel="noreferrer"
@@ -520,7 +527,7 @@ export default function WorkSection() {
                                             )}
                                             {project.github && (
                                                 <a
-                                                    className="text-sm text-zinc-300 transition-colors hover:text-cyan-200"
+                                                    className="text-sm text-foreground/80 transition-colors hover:text-accent"
                                                     href={project.github}
                                                     target="_blank"
                                                     rel="noreferrer"

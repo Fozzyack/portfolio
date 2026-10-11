@@ -170,16 +170,16 @@ export default function AboutSection() {
 
     return (
         <section
-            className="border-t border-white/10 px-6 py-28 text-zinc-100 sm:px-10 sm:py-36 lg:px-16"
+            className="border-t border-teal/20 px-6 py-28 text-foreground sm:px-10 sm:py-36 lg:px-16"
             id="about"
             aria-labelledby="about-title"
             ref={root}
         >
             <div className="mx-auto grid w-full max-w-7xl gap-16 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
                 <div>
-                    <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-cyan-200/80">
+                    <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-accent">
                         <span
-                            className="h-px w-8 bg-cyan-300/70"
+                            className="h-px w-8 bg-accent/70"
                             aria-hidden="true"
                         />
                         01 / About
@@ -188,23 +188,23 @@ export default function AboutSection() {
 
                 <div>
                     <h2
-                        className="heading max-w-4xl text-[clamp(2.75rem,6vw,6rem)] font-medium leading-[0.92] tracking-[-0.07em] text-white"
+                        className="heading max-w-4xl text-[clamp(2.75rem,6vw,6rem)] font-medium leading-[0.92] tracking-[-0.07em] text-cream"
                         id="about-title"
                     >
                         Building thoughtful software.
                     </h2>
-                    <p className="mt-10 max-w-2xl text-lg leading-8 text-zinc-400 sm:text-xl">
+                    <p className="mt-10 max-w-2xl text-lg leading-8 text-foreground/75 sm:text-xl">
                         I&apos;m Frasier, a Perth-based software engineer building
                         useful software and solving practical problems.
                     </p>
 
-                    <dl className="mt-16 grid max-w-2xl gap-6 border-t border-white/10 pt-6 sm:grid-cols-3 sm:gap-8">
+                    <dl className="mt-16 grid max-w-2xl gap-6 border-t border-teal/20 pt-6 sm:grid-cols-3 sm:gap-8">
                         {details.map(([label, value]) => (
                             <div key={label}>
-                                <dt className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">
+                                <dt className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted">
                                     {label}
                                 </dt>
-                                <dd className="mt-2 text-sm text-zinc-200">
+                                <dd className="mt-2 text-sm text-foreground">
                                     {value}
                                 </dd>
                             </div>
@@ -212,16 +212,16 @@ export default function AboutSection() {
                     </dl>
 
                     <div
-                        className="mt-16 max-w-2xl border-t border-white/10 pt-6"
+                        className="mt-16 max-w-2xl border-t border-teal/20 pt-6"
                         ref={techStackRef}
                     >
-                        <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">
+                        <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted">
                             Tools I work with
                         </p>
                         <dl className="mt-6 grid gap-5 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-6">
                             {techStack.map(({ label, technologies }) => (
                                 <div key={label}>
-                                    <dt className="font-mono text-[10px] uppercase tracking-[0.16em] text-cyan-200/70">
+                                    <dt className="font-mono text-[10px] uppercase tracking-[0.16em] text-teal">
                                         {label}
                                     </dt>
                                     <dd className="mt-3 flex flex-wrap gap-2">
@@ -230,10 +230,10 @@ export default function AboutSection() {
                                                 className="icon-badge inline-flex rounded-full"
                                                 key={name}
                                             >
-                                                <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1.5 text-xs text-zinc-300 transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan-300/60 hover:bg-white/[0.06]">
+                                                <span className="inline-flex items-center gap-2 rounded-full border border-teal/20 bg-surface/30 px-2.5 py-1.5 text-xs text-foreground/80 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/60 hover:bg-surface/60">
                                                     <img
                                                         alt=""
-                                                        className="h-4 w-4 object-contain"
+                                                        className="retro-icon h-4 w-4 object-contain"
                                                         src={icon}
                                                     />
                                                     {name}
@@ -244,10 +244,10 @@ export default function AboutSection() {
                                 </div>
                             ))}
                         </dl>
-                        <p className="mt-8 font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-600">
+                        <p className="mt-8 font-mono text-[10px] uppercase tracking-[0.14em] text-muted">
                             Icons from{" "}
                             <a
-                                className="text-zinc-500 transition-colors hover:text-cyan-200"
+                                className="text-muted transition-colors hover:text-accent"
                                 href="https://icons8.com"
                                 target="_blank"
                                 rel="noreferrer"

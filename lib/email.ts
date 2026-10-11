@@ -49,34 +49,34 @@ const sendContactMessage = async (
         subject: `Portfolio contact form: ${name} <${email}>`,
         text: message,
         html: `
-            <div style="margin:0;background:#0a0b0d;color:#f4f4f5;font-family:Arial,Helvetica,sans-serif;padding:40px 20px">
+            <div style="margin:0;background:#090d0e;color:#e5d5b7;font-family:Arial,Helvetica,sans-serif;padding:40px 20px">
                 <div style="max-width:640px;margin:0 auto">
-                    <div style="border-bottom:1px solid #292d32;padding-bottom:16px;color:#71777f;font-family:monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase">
+                    <div style="border-bottom:1px solid #2b3e3e;padding-bottom:16px;color:#7c8b85;font-family:monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase">
                         04 / Contact
                     </div>
                     <div style="padding:40px 0 32px">
-                        <div style="color:#a5f3fc;font-family:monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase">
+                        <div style="color:#ff851b;font-family:monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase">
                             New project enquiry
                         </div>
-                        <h1 style="margin:20px 0 0;color:#f4f4f5;font-size:42px;font-weight:500;letter-spacing:-2px;line-height:1">
+                        <h1 style="margin:20px 0 0;color:#fff0d5;font-size:42px;font-weight:500;letter-spacing:-2px;line-height:1">
                             Let&apos;s make something useful.
                         </h1>
                     </div>
-                    <div style="border-top:1px solid #292d32;border-bottom:1px solid #292d32;padding:24px 0">
+                    <div style="border-top:1px solid #2b3e3e;border-bottom:1px solid #2b3e3e;padding:24px 0">
                         <div style="padding-bottom:20px">
-                            <div style="color:#71777f;font-family:monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase">From</div>
-                            <div style="padding-top:8px;color:#f4f4f5;font-size:16px">${safeName}</div>
+                            <div style="color:#7c8b85;font-family:monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase">From</div>
+                            <div style="padding-top:8px;color:#e5d5b7;font-size:16px">${safeName}</div>
                         </div>
                         <div style="padding-bottom:20px">
-                            <div style="color:#71777f;font-family:monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase">Email</div>
-                            <a href="mailto:${safeEmail}" style="display:inline-block;padding-top:8px;color:#a5f3fc;font-size:16px">${safeEmail}</a>
+                            <div style="color:#7c8b85;font-family:monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase">Email</div>
+                            <a href="mailto:${safeEmail}" style="display:inline-block;padding-top:8px;color:#66b2a5;font-size:16px">${safeEmail}</a>
                         </div>
                         <div>
-                            <div style="color:#71777f;font-family:monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase">Message</div>
-                            <div style="padding-top:8px;color:#d4d4d8;font-size:16px;line-height:1.6">${safeMessage}</div>
+                            <div style="color:#7c8b85;font-family:monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase">Message</div>
+                            <div style="padding-top:8px;color:#e5d5b7;font-size:16px;line-height:1.6">${safeMessage}</div>
                         </div>
                     </div>
-                    <div style="padding-top:24px;color:#71777f;font-family:monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase">
+                    <div style="padding-top:24px;color:#7c8b85;font-family:monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase">
                         Sent from fsundra.dev contact form
                     </div>
                 </div>

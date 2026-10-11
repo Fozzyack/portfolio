@@ -88,11 +88,11 @@ export default function Navbar() {
             aria-label="Primary navigation"
         >
             <div
-                className={`mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-x-8 border px-5 backdrop-blur-md transition-colors duration-300 motion-reduce:transition-none sm:px-6 ${hasScrolled || isMenuOpen ? "border-white/15 bg-[#0a0b0d]/95" : "border-white/8 bg-[#0a0b0d]/70"}`}
+                className={`mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-x-8 border px-5 backdrop-blur-md transition-colors duration-300 motion-reduce:transition-none sm:px-6 ${hasScrolled || isMenuOpen ? "border-teal/30 bg-mantle/95" : "border-teal/15 bg-mantle/70"}`}
                 ref={navRef}
             >
                 <a
-                    className="inline-flex min-h-16 shrink-0 items-center outline-offset-4 focus-visible:outline focus-visible:outline-zinc-300"
+                    className="inline-flex min-h-16 shrink-0 items-center outline-offset-4 focus-visible:outline focus-visible:outline-accent"
                     href="#top"
                     aria-label="Frasier Sundra — home"
                     onClick={() => setIsMenuOpen(false)}
@@ -102,14 +102,14 @@ export default function Navbar() {
                         alt=""
                         width={280}
                         height={90}
-                        className="h-auto w-[70px]"
+                        className="retro-logo h-auto w-[70px]"
                         loading="eager"
                     />
                 </a>
                 <button
                     ref={menuButtonRef}
                     type="button"
-                    className="flex min-h-11 items-center gap-3 font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-300 outline-offset-4 hover:text-white focus-visible:outline focus-visible:outline-zinc-300 md:hidden"
+                    className="flex min-h-11 items-center gap-3 font-mono text-[10px] uppercase tracking-[0.12em] text-foreground/80 outline-offset-4 hover:text-accent focus-visible:outline focus-visible:outline-accent md:hidden"
                     aria-expanded={isMenuOpen}
                     aria-controls="primary-navigation-links"
                     onClick={() => setIsMenuOpen((open) => !open)}
@@ -119,12 +119,12 @@ export default function Navbar() {
                 </button>
                 <ul
                     id="primary-navigation-links"
-                    className={`${isMenuOpen ? "flex" : "hidden"} w-full flex-col border-t border-white/10 pb-4 pt-2 text-sm text-zinc-400 md:flex md:w-auto md:flex-row md:items-center md:gap-5 md:border-0 md:py-0 md:text-xs lg:gap-8`}
+                    className={`${isMenuOpen ? "flex" : "hidden"} w-full flex-col border-t border-teal/20 pb-4 pt-2 text-sm text-muted md:flex md:w-auto md:flex-row md:items-center md:gap-5 md:border-0 md:py-0 md:text-xs lg:gap-8`}
                 >
                     {links.map((link) => (
                         <li key={link.href}>
                             <a
-                                className={`flex min-h-11 items-center gap-2 underline-offset-8 transition-colors hover:text-[#f2f0eb] hover:underline focus-visible:text-white focus-visible:outline focus-visible:outline-zinc-300 motion-reduce:transition-none ${link.href.startsWith("https://") ? "text-[#f2f0eb]" : ""}`}
+                                className={`flex min-h-11 items-center gap-2 underline-offset-8 transition-colors hover:text-accent hover:underline focus-visible:text-accent focus-visible:outline focus-visible:outline-accent motion-reduce:transition-none ${link.href.startsWith("https://") ? "text-foreground" : ""}`}
                                 href={link.href}
                                 onClick={() => setIsMenuOpen(false)}
                             >
@@ -135,7 +135,7 @@ export default function Navbar() {
                                             {" "}(external site)
                                         </span>
                                         <span
-                                            className="text-zinc-500"
+                                            className="text-teal"
                                             aria-hidden="true"
                                         >
                                             ↗
@@ -145,16 +145,16 @@ export default function Navbar() {
                             </a>
                         </li>
                     ))}
-                    <li className="mt-2 border-t border-white/10 pt-2 md:mt-0 md:border-l md:border-t-0 md:pl-5 md:pt-0 lg:pl-8">
+                    <li className="mt-2 border-t border-teal/20 pt-2 md:mt-0 md:border-l md:border-t-0 md:pl-5 md:pt-0 lg:pl-8">
                         <a
-                            className="inline-flex min-h-11 items-center gap-2 text-[#f2f0eb] underline-offset-8 hover:underline focus-visible:outline focus-visible:outline-zinc-300"
+                            className="inline-flex min-h-11 items-center gap-2 text-foreground underline-offset-8 hover:text-accent hover:underline focus-visible:outline focus-visible:outline-accent"
                             href="/FrasierSundra.pdf"
                             target="_blank"
                             rel="noreferrer"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Resume
-                            <span className="text-zinc-500" aria-hidden="true">
+                            <span className="text-teal" aria-hidden="true">
                                 ↗
                             </span>
                         </a>

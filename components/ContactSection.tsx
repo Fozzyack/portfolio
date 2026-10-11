@@ -84,20 +84,20 @@ export default function ContactSection() {
 
     return (
         <section
-            className="border-t border-white/10 bg-[#0a0b0d] px-6 pt-24 text-zinc-100 sm:px-10 sm:pt-32 lg:px-16 py-12"
+            className="border-t border-teal/20 bg-background px-6 pt-24 text-foreground sm:px-10 sm:pt-32 lg:px-16 py-12"
             id="contact"
             aria-labelledby="contact-title"
             ref={root}
         >
             <div className="mx-auto w-full max-w-7xl">
-                <div className="flex items-center justify-between border-b border-white/10 pb-5 font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-500">
+                <div className="flex items-center justify-between border-b border-teal/20 pb-5 font-mono text-[10px] uppercase tracking-[0.18em] text-muted">
                     <span>04 / Contact</span>
                     <span>Perth, WA · Australia</span>
                 </div>
 
                 <div className="grid gap-16 py-20 lg:grid-cols-[1.25fr_0.75fr] lg:gap-24 lg:py-28">
                     <div>
-                        <p className="header font-mono text-xs uppercase tracking-[0.18em] text-cyan-200/80">
+                        <p className="header font-mono text-xs uppercase tracking-[0.18em] text-accent">
                             Have a project in mind?
                         </p>
                         <h2
@@ -109,7 +109,7 @@ export default function ContactSection() {
                     </div>
 
                     <div className="lg:pb-2">
-                        <p className="max-w-sm text-lg leading-7 text-zinc-400">
+                        <p className="max-w-sm text-lg leading-7 text-foreground/75">
                             Tell me what you&apos;re working on, where
                             you&apos;re stuck, or what we could build together.
                         </p>
@@ -119,13 +119,13 @@ export default function ContactSection() {
                         >
                             <div>
                                 <label
-                                    className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500"
+                                    className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted"
                                     htmlFor="contact-name"
                                 >
                                     Name
                                 </label>
                                 <input
-                                    className="mt-3 block w-full border-b border-white/20 bg-transparent px-0 py-3 text-base text-zinc-100 outline-none transition-colors placeholder:text-zinc-600 focus:border-cyan-200"
+                                    className="mt-3 block w-full border-b border-teal/40 bg-transparent px-0 py-3 text-base text-foreground caret-accent outline-none transition-colors placeholder:text-muted focus:border-accent"
                                     id="contact-name"
                                     name="name"
                                     placeholder="Your name"
@@ -135,13 +135,13 @@ export default function ContactSection() {
                             </div>
                             <div>
                                 <label
-                                    className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500"
+                                    className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted"
                                     htmlFor="contact-email"
                                 >
                                     Email address
                                 </label>
                                 <input
-                                    className="mt-3 block w-full border-b border-white/20 bg-transparent px-0 py-3 text-base text-zinc-100 outline-none transition-colors placeholder:text-zinc-600 focus:border-cyan-200"
+                                    className="mt-3 block w-full border-b border-teal/40 bg-transparent px-0 py-3 text-base text-foreground caret-accent outline-none transition-colors placeholder:text-muted focus:border-accent"
                                     id="contact-email"
                                     name="email"
                                     placeholder="you@example.com"
@@ -151,13 +151,13 @@ export default function ContactSection() {
                             </div>
                             <div>
                                 <label
-                                    className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500"
+                                    className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted"
                                     htmlFor="contact-message"
                                 >
                                     Message
                                 </label>
                                 <textarea
-                                    className="mt-3 block min-h-32 w-full resize-y border-b border-white/20 bg-transparent px-0 py-3 text-base text-zinc-100 outline-none transition-colors placeholder:text-zinc-600 focus:border-cyan-200"
+                                    className="mt-3 block min-h-32 w-full resize-y border-b border-teal/40 bg-transparent px-0 py-3 text-base text-foreground caret-accent outline-none transition-colors placeholder:text-muted focus:border-accent"
                                     id="contact-message"
                                     name="message"
                                     placeholder="Tell me a little about your project"
@@ -167,7 +167,7 @@ export default function ContactSection() {
                             <div className="flex items-center justify-between gap-4 pt-2">
                                 <p
                                     aria-live="polite"
-                                    className={`text-sm ${status === "error" ? "text-red-300" : "text-zinc-500"}`}
+                                    className={`text-sm ${status === "error" ? "text-retro-red-bright" : "text-teal"}`}
                                 >
                                     {status === "sent"
                                         ? "Message sent. I'll be in touch soon."
@@ -176,7 +176,7 @@ export default function ContactSection() {
                                           : "Usually replies within a day."}
                                 </p>
                                 <button
-                                    className="shrink-0 border border-cyan-200 px-5 py-3 font-mono text-[10px] uppercase tracking-[0.16em] text-cyan-200 transition-colors hover:bg-cyan-200 hover:text-[#0a0b0d] disabled:cursor-wait disabled:opacity-50"
+                                    className="shrink-0 border border-accent px-5 py-3 font-mono text-[10px] uppercase tracking-[0.16em] text-accent transition-colors hover:bg-accent hover:text-background disabled:cursor-wait disabled:opacity-50"
                                     disabled={status === "sending"}
                                     type="submit"
                                 >
@@ -191,13 +191,13 @@ export default function ContactSection() {
 
                 <div className="flex flex-col justify-between gap-8  pt-5 text-sm sm:flex-row sm:items-end">
                     <div>
-                        <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">
+                        <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted">
                             Find me online
                         </p>
                         <div className="mt-4 flex gap-6">
                             {contactLinks.map((link) => (
                                 <a
-                                    className="text-zinc-300 transition-colors hover:text-cyan-200"
+                                    className="text-foreground/80 transition-colors hover:text-accent"
                                     href={link.href}
                                     key={link.label}
                                     target="_blank"
@@ -208,7 +208,7 @@ export default function ContactSection() {
                             ))}
                         </div>
                     </div>
-                    <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-500">
+                    <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted">
                         Frasier Sundra © 2026
                     </p>
                 </div>

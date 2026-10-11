@@ -36,7 +36,7 @@ export default function LoadingScreen() {
         <div
             aria-label="Loading portfolio"
             aria-live="polite"
-            className={`fixed inset-0 z-[200] flex items-center justify-center bg-[#0a0b0d] text-zinc-100 transition-opacity duration-700 ${
+            className={`fixed inset-0 z-[200] flex items-center justify-center bg-background text-foreground transition-opacity duration-700 ${
                 isLoading ? "opacity-100" : "pointer-events-none opacity-0"
             }`}
             role="status"
@@ -47,15 +47,15 @@ export default function LoadingScreen() {
                     alt="Frasier Sundra"
                     width={576}
                     height={199}
-                    className="mx-auto h-auto w-40"
+                    className="retro-logo mx-auto h-auto w-40"
                     loading="eager"
                     fetchPriority="high"
                 />
-                <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-500">
+                <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.18em] text-muted">
                     Loading portfolio
                 </p>
-                <div className="mt-5 h-px overflow-hidden bg-white/10">
-                    <div className="h-full w-1/2 animate-[loading-bar_1.2s_ease-in-out_infinite] bg-cyan-200" />
+                <div className="mt-5 h-px overflow-hidden bg-surface">
+                    <div className="h-full w-1/2 animate-[loading-bar_1.2s_ease-in-out_infinite] bg-accent" />
                 </div>
             </div>
         </div>

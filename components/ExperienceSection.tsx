@@ -95,22 +95,22 @@ export default function ExperienceSection() {
     );
     return (
         <section
-            className="px-6 py-28 text-zinc-100 sm:px-10 sm:py-36 lg:px-16"
+            className="px-6 py-28 text-foreground sm:px-10 sm:py-36 lg:px-16"
             id="experience"
             aria-labelledby="experience-title"
             ref={root}
         >
             <div className="mx-auto grid w-full max-w-7xl gap-16 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
                 <div>
-                    <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-cyan-200/80">
+                    <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-accent">
                         <span
-                            className="h-px w-8 bg-cyan-300/70"
+                            className="h-px w-8 bg-accent/70"
                             aria-hidden="true"
                         />
                         02 / Experience
                     </p>
                     {/*
-                        <p className="subheader mt-8 max-w-xs text-sm leading-6 text-zinc-500">
+                        <p className="subheader mt-8 max-w-xs text-sm leading-6 text-muted">
                             The places, practices, and projects shaping how I build.
                         </p>
                     */}
@@ -118,7 +118,7 @@ export default function ExperienceSection() {
 
                 <div>
                     <h2
-                        className="header max-w-3xl text-[clamp(3rem,6vw,6rem)] font-medium leading-[0.88] tracking-[-0.08em] text-white"
+                        className="header max-w-3xl text-[clamp(3rem,6vw,6rem)] font-medium leading-[0.88] tracking-[-0.08em] text-cream"
                         id="experience-title"
                     >
                         Building from the ground up.
@@ -126,40 +126,40 @@ export default function ExperienceSection() {
 
                     <div
                         id="experience"
-                        className="mt-16 border-t border-white/15"
+                        className="mt-16 border-t border-teal/25"
                     >
                         {experience.map((item, index) => (
                             <article
-                                className="experience-card grid gap-8 border-b border-white/15 py-8 sm:grid-cols-[8rem_1fr] sm:gap-10 sm:py-10"
+                                className="experience-card grid gap-8 border-b border-teal/25 py-8 sm:grid-cols-[8rem_1fr] sm:gap-10 sm:py-10"
                                 key={item.company}
                             >
                                 <div className="flex justify-between gap-4 sm:block">
-                                    <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-zinc-500">
+                                    <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-muted">
                                         {item.period}
                                     </p>
-                                    <span className="font-mono text-[10px] text-cyan-200/70 sm:mt-5 sm:block">
+                                    <span className="font-mono text-[10px] text-teal sm:mt-5 sm:block">
                                         0{index + 1}
                                     </span>
                                 </div>
 
                                 <div className="grid gap-6 lg:grid-cols-[1fr_0.85fr] lg:gap-12">
                                     <div>
-                                        <h3 className="text-2xl font-medium tracking-[-0.05em] text-white sm:text-3xl">
+                                        <h3 className="text-2xl font-medium tracking-[-0.05em] text-cream sm:text-3xl">
                                             {item.role}
                                         </h3>
-                                        <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-sm text-zinc-400">
+                                        <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-sm text-foreground/75">
                                             <span>{item.company}</span>
-                                            <span className="text-zinc-600">
+                                            <span className="text-muted">
                                                 /
                                             </span>
                                             <span>{item.location}</span>
                                         </div>
                                     </div>
                                     <div>
-                                        <p className="text-sm leading-6 text-zinc-400">
+                                        <p className="text-sm leading-6 text-foreground/75">
                                             {item.description}
                                         </p>
-                                        <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.12em] text-cyan-200/70">
+                                        <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.12em] text-teal">
                                             {item.skills}
                                         </p>
                                     </div>
