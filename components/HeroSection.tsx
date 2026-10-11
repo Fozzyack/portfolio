@@ -8,7 +8,6 @@ const RetroComputer = dynamic(() => import("@/components/RetroComputer"), {
 });
 
 const profile = {
-    name: "Frasier Sundra",
     email: "fsundra@gmail.com",
     github: "https://github.com/Fozzyack",
     linkedin: "https://linkedin.com/in/fsundra",

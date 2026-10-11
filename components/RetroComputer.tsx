@@ -393,9 +393,9 @@ export default function RetroComputer({
             if (!width || !height) return;
             camera.aspect = width / height;
             // Fit the whole desk setup on narrow screens as well as desktops.
-            const distance = Math.max(7.3, 7.5 / camera.aspect);
+            const distance = Math.max(9.2, 9.8 / camera.aspect);
             camera.position.set(0, distance * 0.17, distance);
-            camera.lookAt(0, 0.05, 0.35);
+            camera.lookAt(0, -0.3, 0.35);
             camera.updateProjectionMatrix();
             renderer.setSize(width, height);
             resume();
